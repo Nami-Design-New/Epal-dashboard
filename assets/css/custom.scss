@@ -1,0 +1,17 @@
+.menuFav {
+  height: 22px;
+  object-fit: contain;
+}
+.menuLogo {
+  height: 40px;
+  object-fit: contain;
+}
+.modal {
+  z-index: 1004;
+}
+.modal-backdrop {
+  z-index: 1003;
+}
+.select2-container .select2-selection--multiple .select2-selection__choice {
+  color: #000;
+}

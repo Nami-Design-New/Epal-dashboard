@@ -1,0 +1,23 @@
+.menuFav {
+  height: 22px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.menuLogo {
+  height: 40px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.modal {
+  z-index: 1004;
+}
+
+.modal-backdrop {
+  z-index: 1003;
+}
+
+.select2-container .select2-selection--multiple .select2-selection__choice {
+  color: #000;
+}/*# sourceMappingURL=custom.css.map */

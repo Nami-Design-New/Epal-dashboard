@@ -1,11 +1,10 @@
 <!doctype html>
-<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="light" data-sidebar-size="lg"
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg"
     data-sidebar-image="none" data-preloader="disable" dir="ltr">
 
 <head>
-
     <meta charset="utf-8" />
-    <title>Dashboard | Velzon - Admin & Dashboard Template</title>
+    <title>Epal Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
@@ -25,14 +24,8 @@
     <link href="assets/css/app.min.css" id="appCss" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
     <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css" />
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const savedDirection = sessionStorage.getItem("languageDirection");
-            if (savedDirection) {
-                switchLanguage(savedDirection);
-            }
-        });
-    </script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 
 <body>
@@ -46,18 +39,18 @@
                         <div class="navbar-brand-box horizontal-logo">
                             <a href="index.html" class="logo logo-dark">
                                 <span class="logo-sm">
-                                    <img src="assets/images/fav.svg" alt="" height="22">
+                                    <img src="assets/images/fav.svg" alt="" class="menuFav">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="assets/images/logo-dark.png" alt="" height="17">
+                                    <img src="assets/images/logo-dark.png" alt="" class="menuLogo">
                                 </span>
                             </a>
                             <a href="index.html" class="logo logo-light">
                                 <span class="logo-sm">
-                                    <img src="assets/images/fav.svg" alt="" height="22">
+                                    <img src="assets/images/fav.svg" alt="" class="menuFav">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="assets/images/logo-light.png" alt="" height="17">
+                                    <img src="assets/images/logo-light.png" alt="" class="menuLogo">
                                 </span>
                             </a>
                         </div>
@@ -406,8 +399,7 @@
                                         class="mdi mdi-lifebuoy text-muted fs-16 align-middle me-1"></i> <span
                                         class="align-middle">Help</span></a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="pages-profile-settings.html"><span
-                                        class="badge bg-success-subtle text-success mt-1 float-end">New</span><i
+                                <a class="dropdown-item" href="pages-profile-settings.html"><i
                                         class="mdi mdi-cog-outline text-muted fs-16 align-middle me-1"></i> <span
                                         class="align-middle">Settings</span></a>
                                 <a class="dropdown-item" href="auth-logout-basic.html"><i
@@ -453,19 +445,19 @@
                 <!-- Dark Logo-->
                 <a href="index.html" class="logo logo-dark">
                     <span class="logo-sm">
-                        <img src="assets/images/fav.svg" alt="" height="22">
+                        <img src="assets/images/fav.svg" class="menuFav" alt="">
                     </span>
                     <span class="logo-lg">
-                        <img src="assets/images/logo-dark.png" alt="" height="40">
+                        <img src="assets/images/logo-dark.png" class="menuLogo" alt="">
                     </span>
                 </a>
                 <!-- Light Logo-->
                 <a href="index.html" class="logo logo-light">
                     <span class="logo-sm">
-                        <img src="assets/images/fav.svg" alt="" height="22">
+                        <img src="assets/images/fav2.svg" class="menuFav" alt="">
                     </span>
                     <span class="logo-lg">
-                        <img src="assets/images/logo-light.png" alt="" height="40">
+                        <img src="assets/images/logo-light.png" class="menuLogo" alt="">
                     </span>
                 </a>
                 <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
@@ -487,7 +479,7 @@
                             <div class="collapse menu-dropdown" id="sidebarDashboards">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
-                                        <a href="index.html" class="nav-link" data-key="t-ecommerce"> Ecommerce </a>
+                                        <a href="index.html" class="nav-link" data-key="t-ecommerce"> Payments</a>
                                     </li>
                                 </ul>
                             </div>
@@ -510,8 +502,8 @@
                                         <div class="collapse menu-dropdown" id="sidebarSignIn">
                                             <ul class="nav nav-sm flex-column">
                                                 <li class="nav-item">
-                                                    <a href="auth-signin-cover.html" class="nav-link"
-                                                        data-key="t-cover"> Cover
+                                                    <a href="auth-signin-basic.html" class="nav-link"
+                                                        data-key="t-cover"> Basic
                                                     </a>
                                                 </li>
                                             </ul>
@@ -525,8 +517,8 @@
                                         <div class="collapse menu-dropdown" id="sidebarSignUp">
                                             <ul class="nav nav-sm flex-column">
                                                 <li class="nav-item">
-                                                    <a href="auth-signup-cover.html" class="nav-link"
-                                                        data-key="t-cover"> Cover
+                                                    <a href="auth-signup-basic.html" class="nav-link"
+                                                        data-key="t-cover"> Basic
                                                     </a>
                                                 </li>
                                             </ul>
@@ -541,9 +533,9 @@
                                         <div class="collapse menu-dropdown" id="sidebarResetPass">
                                             <ul class="nav nav-sm flex-column">
                                                 <li class="nav-item">
-                                                    <a href="auth-pass-reset-cover.html" class="nav-link"
+                                                    <a href="auth-pass-reset-basic.html" class="nav-link"
                                                         data-key="t-cover">
-                                                        Cover </a>
+                                                        Basic </a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -556,8 +548,8 @@
                                         <div class="collapse menu-dropdown" id="sidebarLogout">
                                             <ul class="nav nav-sm flex-column">
                                                 <li class="nav-item">
-                                                    <a href="auth-logout-cover.html" class="nav-link"
-                                                        data-key="t-cover"> Cover
+                                                    <a href="auth-logout-basic.html" class="nav-link"
+                                                        data-key="t-cover"> Basic
                                                     </a>
                                                 </li>
                                             </ul>
@@ -571,9 +563,9 @@
                                         <div class="collapse menu-dropdown" id="sidebarErrors">
                                             <ul class="nav nav-sm flex-column">
                                                 <li class="nav-item">
-                                                    <a href="auth-404-cover.html" class="nav-link"
+                                                    <a href="auth-404-basic.html" class="nav-link"
                                                         data-key="t-404-cover"> 404
-                                                        Cover </a>
+                                                        Basic </a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a href="auth-500.html" class="nav-link" data-key="t-500"> 500 </a>
@@ -582,85 +574,6 @@
                                         </div>
                                     </li>
                                 </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="#sidebarPages" data-bs-toggle="collapse" role="button"
-                                aria-expanded="false" aria-controls="sidebarPages">
-                                <i class="ri-pages-line"></i> <span data-key="t-pages">Pages</span>
-                            </a>
-                            <div class="collapse menu-dropdown" id="sidebarPages">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a href="pages-starter.html" class="nav-link" data-key="t-starter"> Starter </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#sidebarProfile" class="nav-link" data-bs-toggle="collapse"
-                                            role="button" aria-expanded="false" aria-controls="sidebarProfile"
-                                            data-key="t-profile"> Profile
-                                        </a>
-                                        <div class="collapse menu-dropdown" id="sidebarProfile">
-                                            <ul class="nav nav-sm flex-column">
-                                                <li class="nav-item">
-                                                    <a href="pages-profile.html" class="nav-link"
-                                                        data-key="t-simple-page">
-                                                        Simple Page </a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="pages-profile-settings.html" class="nav-link"
-                                                        data-key="t-settings"> Settings </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="#sidebarLanding" data-bs-toggle="collapse" role="button"
-                                aria-expanded="false" aria-controls="sidebarLanding">
-                                <i class="ri-rocket-line"></i> <span data-key="t-landing">Landing</span>
-                            </a>
-                            <div class="collapse menu-dropdown" id="sidebarLanding">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a href="landing.html" class="nav-link" data-key="t-one-page"> One Page </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="nft-landing.html" class="nav-link" data-key="t-nft-landing"> NFT
-                                            Landing </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="job-landing.html" class="nav-link" data-key="t-job">Job</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="menu-title"><i class="ri-more-fill"></i> <span
-                                data-key="t-components">Components</span></li>
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="#sidebarUI" data-bs-toggle="collapse" role="button"
-                                aria-expanded="false" aria-controls="sidebarUI">
-                                <i class="ri-pencil-ruler-2-line"></i> <span data-key="t-base-ui">Base UI</span>
-                            </a>
-                            <div class="collapse menu-dropdown mega-dropdown-menu" id="sidebarUI">
-                                <div class="row">
-                                    <div class="col-lg-4">
-                                        <ul class="nav nav-sm flex-column">
-                                            <li class="nav-item">
-                                                <a href="ui-buttons.html" class="nav-link"
-                                                    data-key="t-buttons">Buttons</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <ul class="nav nav-sm flex-column">
-                                            <li class="nav-item">
-                                                <a href="ui-tabs.html" class="nav-link" data-key="t-tabs">Tabs</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
                             </div>
                         </li>
                         <li class="nav-item">
@@ -710,7 +623,6 @@
                                 </ul>
                             </div>
                         </li>
-
                     </ul>
                 </div>
                 <!-- Sidebar -->
@@ -724,16 +636,330 @@
         <!-- Start right Content here -->
         <!-- ============================================================== -->
         <div class="main-content">
+            <div class="page-content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 p-2 d-flex justify-content-between align-content-center">
+                            <h2>Payments</h2>
+                            <button type="button" class="btn btn-soft-success" data-bs-toggle="modal"
+                                data-bs-target="#addExpense">
+                                <i class="ri-add-circle-line align-middle me-1"></i> Add New Expense
+                            </button>
+                        </div>
+                        <div class="col-12 p-2">
+                            <div class="card p-4">
+                                <form action="" class="row">
+                                    <div class="col-xxl-2 col-md-3 p-2">
+                                        <div>
+                                            <label for="startDate" class="form-label">Start Date</label>
+                                            <input type="date" class="form-control" id="startDate">
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-2 col-md-3 p-2">
+                                        <div>
+                                            <label for="endDate" class="form-label">End Date</label>
+                                            <input type="date" class="form-control" id="endDate">
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-2 col-md-3 p-2">
+                                        <div>
+                                            <label for="endDate" class="form-label">Job Name</label>
+                                            <select class="form-select mb-3" aria-label="Default select example">
+                                                <option selected="">Select your job </option>
+                                                <option value="1">Engineer</option>
+                                                <option value="2">Doctor</option>
+                                                <option value="3">Developer</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-2 col-md-3 p-2">
+                                        <div>
+                                            <label for="endDate" class="form-label">Client</label>
+                                            <select class="form-select mb-3" aria-label="Default select example">
+                                                <option selected="">Select Client </option>
+                                                <option value="1">Mohamed</option>
+                                                <option value="2">Ali</option>
+                                                <option value="3">Ahmed</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-2 col-md-3 p-2">
+                                        <div>
+                                            <label for="endDate" class="form-label">Vendor</label>
+                                            <select class="form-select mb-3" aria-label="Default select example">
+                                                <option selected="">Select Vendor </option>
+                                                <option value="1">Mohamed</option>
+                                                <option value="2">Ali</option>
+                                                <option value="3">Ahmed</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-2 col-md-3 p-2">
+                                        <div>
+                                            <label for="endDate" class="form-label">Company</label>
+                                            <select class="form-select  mb-3" aria-label="Default select example">
+                                                <option selected="">Select Client </option>
+                                                <option value="1">Nami</option>
+                                                <option value="2">Epal</option>
+                                                <option value="3">Romoz</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-1 col-md-3 p-2 d-flex align-items-end">
+                                        <div class="w-100">
+                                            <button
+                                                class="btn btn-success w-100 mb-3 d-flex justify-content-center align-items-center gap-1"
+                                                type="submit"><i class="ri-search-line"></i> Search
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-12 p-2">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="card card-animate">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="pt-2">
+                                                    <p class="fw-medium text-muted mb-0">Total Gross Revenue</p>
+                                                    <h2 class="mt-4 ff-secondary fw-semibold">
+                                                        <span class="counter-value" data-target="50.66">0</span>k
+                                                    </h2>
+                                                    <p class="mb-0 text-muted">
+                                                        <span class="badge bg-light text-danger mb-0"> <i
+                                                                class="ri-arrow-down-line align-middle"></i> 3.96 %
+                                                        </span>
+                                                        vs. previous month
+                                                    </p>
+                                                </div>
+                                                <div>
+                                                    <div class="avatar-sm flex-shrink-0">
+                                                        <span class="avatar-title bg-info-subtle rounded-circle fs-2">
+                                                            <i data-feather="activity" class="text-info"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card card-animate">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="pt-2">
+                                                    <p class="fw-medium text-muted mb-0">Total Payment</p>
+                                                    <h2 class="mt-4 ff-secondary fw-semibold">
+                                                        <span class="counter-value" data-target="97.66">0</span>k
+                                                    </h2>
+                                                    <p class="mb-0 text-muted">
+                                                        <span class="badge bg-light text-danger mb-0"> <i
+                                                                class="ri-arrow-down-line align-middle"></i> 3.96 %
+                                                        </span>
+                                                        vs. previous month
+                                                    </p>
+                                                </div>
+                                                <div>
+                                                    <div class="avatar-sm flex-shrink-0">
+                                                        <span class="avatar-title bg-info-subtle rounded-circle fs-2">
+                                                            <i data-feather="activity" class="text-info"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card card-animate">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="pt-2">
+                                                    <p class="fw-medium text-muted mb-0">Total Expenses</p>
+                                                    <h2 class="mt-4 ff-secondary fw-semibold">
+                                                        <span class="counter-value" data-target="35">0</span>k
+                                                    </h2>
+                                                    <p class="mb-0 text-muted">
+                                                        <span class="badge bg-light text-danger mb-0"> <i
+                                                                class="ri-arrow-down-line align-middle"></i> 3.96 %
+                                                        </span>
+                                                        vs. previous month
+                                                    </p>
+                                                </div>
+                                                <div>
+                                                    <div class="avatar-sm flex-shrink-0">
+                                                        <span class="avatar-title bg-info-subtle rounded-circle fs-2">
+                                                            <i data-feather="activity" class="text-info"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card card-animate">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="pt-2">
+                                                    <p class="fw-medium text-muted mb-0">Total Global Expenses</p>
+                                                    <h2 class="mt-4 ff-secondary fw-semibold">
+                                                        <span class="counter-value" data-target="86">0</span>k
+                                                    </h2>
+                                                    <p class="mb-0 text-muted">
+                                                        <span class="badge bg-light text-danger mb-0"> <i
+                                                                class="ri-arrow-down-line align-middle"></i> 3.96 %
+                                                        </span>
+                                                        vs. previous month
+                                                    </p>
+                                                </div>
+                                                <div>
+                                                    <div class="avatar-sm flex-shrink-0">
+                                                        <span class="avatar-title bg-info-subtle rounded-circle fs-2">
+                                                            <i data-feather="activity" class="text-info"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 p-2">
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h4 class="card-title mb-2">Total Payment</h4>
+                                            <h5 class="mb-0 fw-bold">2000</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div id="line_chart_datalabel" data-colors='["#16a34a", "#f6c77d"]'
+                                                class="apex-charts" dir="ltr"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h4 class="card-title mb-2">Total Net Income</h4>
+                                            <h5 class="mb-0 fw-bold">112</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div id="simple_dount_chart" data-colors='["#f6c77d", "#90be6d", "#f8961e"]'
+                                                class="apex-charts" dir="ltr">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="addExpense" class="modal fade zoomIn" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="mb-0">Add New Expense</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                    id="NotificationModalbtn-close">
+                                </button>
+                            </div>
+                            <div class="modal-body container">
+                                <form action="" class="row">
+                                    <div class="col-12 p-2">
+                                        <h6 class="fw-semibold">Company</h6>
+                                        <select class="js-example-basic-multiple form-select" name="states[]"
+                                            multiple="multiple">
+                                            <optgroup label="UK">
+                                                <option value="London">London</option>
+                                                <option value="Manchester">Manchester</option>
+                                                <option value="Liverpool">Liverpool</option>
+                                            </optgroup>
+                                            <optgroup label="FR">
+                                                <option value="Paris">Paris</option>
+                                                <option value="Lyon">Lyon</option>
+                                                <option value="Marseille">Marseille</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <div>
+                                            <label for="job" class="form-label">Job Name</label>
+                                            <select class="form-select mb-3" aria-label="Default select example">
+                                                <option selected="">Select your job </option>
+                                                <option value="1">Engineer</option>
+                                                <option value="2">Doctor</option>
+                                                <option value="3">Developer</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <div>
+                                            <label for="expense" class="form-label">Expense Type</label>
+                                            <select class="form-select mb-3" aria-label="Default select example">
+                                                <option selected="">Select Type </option>
+                                                <option value="1">insurance</option>
+                                                <option value="2">testing</option>
+                                                <option value="3">security</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <div>
+                                            <label for="amount" class="form-label">Amount</label>
+                                            <input type="text" class="form-control" id="amount" placeholder="$00,00">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <div>
+                                            <label for="payType" class="form-label">Payment Type</label>
+                                            <select class="form-select mb-3" aria-label="Default select example">
+                                                <option selected="">Select Type </option>
+                                                <option value="1">Cash</option>
+                                                <option value="2">Bank transfer</option>
+                                                <option value="3">Bank check</option>
+                                                <option value="4">Credit card</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <div>
+                                            <label for="checkNum" class="form-label">Bank check number</label>
+                                            <input type="text" class="form-control" id="checkNum" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <div>
+                                            <label for="payDate" class="form-label">Payment Date</label>
+                                            <input type="date" class="form-control" id="payDate">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 p-2">
+                                        <div>
+                                            <label for="comment" class="form-label">Comment</label>
+                                            <textarea name="comment" id="comment" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- End Page-content -->
             <footer class="footer">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <script>document.write(new Date().getFullYear())</script> © Velzon.
+                            <script>document.write(new Date().getFullYear())</script> © Epal.
                         </div>
                         <div class="col-sm-6">
                             <div class="text-sm-end d-none d-sm-block">
-                                Design & Develop by Themesbrand
+                                Design & Develop by Epal
                             </div>
                         </div>
                     </div>
@@ -743,13 +969,13 @@
         <!-- end main content-->
     </div>
     <!-- END layout-wrapper -->
-
+    <!-- +++++++++++++++++++++++++++++++++++++ -->
+    <!-- +++++++++++++++++++++++++++++++++++++ -->
+    <!-- +++++++++++++++++++++++++++++++++++++ -->
     <!--start back-to-top-->
     <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
         <i class="ri-arrow-up-line"></i>
     </button>
-    <!--end back-to-top-->
-
     <!--preloader-->
     <div id="preloader">
         <div id="status">
@@ -758,14 +984,12 @@
             </div>
         </div>
     </div>
-
     <div class="customizer-setting d-none d-md-block">
         <div class="btn-info rounded-pill shadow-lg btn btn-icon btn-lg p-2" data-bs-toggle="offcanvas"
             data-bs-target="#theme-settings-offcanvas" aria-controls="theme-settings-offcanvas">
             <i class='mdi mdi-spin mdi-cog-outline fs-22'></i>
         </div>
     </div>
-
     <!-- Theme Settings -->
     <div class="offcanvas offcanvas-end border-0" tabindex="-1" id="theme-settings-offcanvas">
         <div class="d-flex align-items-center bg-primary bg-gradient p-3 offcanvas-header">
@@ -1049,16 +1273,13 @@
                             </div>
                         </div>
                     </div>
-
                     <div id="layout-position">
                         <h6 class="mt-4 mb-0 fw-semibold text-uppercase">Layout Position</h6>
                         <p class="text-muted">Choose Fixed or Scrollable Layout Position.</p>
-
                         <div class="btn-group radio" role="group">
                             <input type="radio" class="btn-check" name="data-layout-position" id="layout-position-fixed"
                                 value="fixed">
                             <label class="btn btn-light w-sm" for="layout-position-fixed">Fixed</label>
-
                             <input type="radio" class="btn-check" name="data-layout-position"
                                 id="layout-position-scrollable" value="scrollable">
                             <label class="btn btn-light w-sm ms-0" for="layout-position-scrollable">Scrollable</label>
@@ -1066,7 +1287,6 @@
                     </div>
                     <h6 class="mt-4 mb-0 fw-semibold text-uppercase">Topbar Color</h6>
                     <p class="text-muted">Choose Light or Dark Topbar Color.</p>
-
                     <div class="row">
                         <div class="col-4">
                             <div class="form-check card-radio">
@@ -1119,11 +1339,9 @@
                             <h5 class="fs-13 text-center mt-2">Dark</h5>
                         </div>
                     </div>
-
                     <div id="sidebar-size">
                         <h6 class="mt-4 mb-0 fw-semibold text-uppercase">Sidebar Size</h6>
                         <p class="text-muted">Choose a size of Sidebar.</p>
-
                         <div class="row">
                             <div class="col-4">
                                 <div class="form-check sidebar-setting card-radio">
@@ -1151,7 +1369,6 @@
                                 </div>
                                 <h5 class="fs-13 text-center mt-2">Default</h5>
                             </div>
-
                             <div class="col-4">
                                 <div class="form-check sidebar-setting card-radio">
                                     <input class="form-check-input" type="radio" name="data-sidebar-size"
@@ -1177,7 +1394,6 @@
                                 </div>
                                 <h5 class="fs-13 text-center mt-2">Compact</h5>
                             </div>
-
                             <div class="col-4">
                                 <div class="form-check sidebar-setting card-radio">
                                     <input class="form-check-input" type="radio" name="data-sidebar-size"
@@ -1203,7 +1419,6 @@
                                 </div>
                                 <h5 class="fs-13 text-center mt-2">Small (Icon View)</h5>
                             </div>
-
                             <div class="col-4">
                                 <div class="form-check sidebar-setting card-radio">
                                     <input class="form-check-input" type="radio" name="data-sidebar-size"
@@ -1231,11 +1446,9 @@
                             </div>
                         </div>
                     </div>
-
                     <div id="sidebar-view">
                         <h6 class="mt-4 mb-0 fw-semibold text-uppercase">Sidebar View</h6>
                         <p class="text-muted">Choose Default or Detached Sidebar view.</p>
-
                         <div class="row">
                             <div class="col-4">
                                 <div class="form-check sidebar-setting card-radio">
@@ -1294,7 +1507,6 @@
                     <div id="sidebar-color">
                         <h6 class="mt-4 mb-0 fw-semibold text-uppercase">Sidebar Color</h6>
                         <p class="text-muted">Choose a color of Sidebar.</p>
-
                         <div class="row">
                             <div class="col-4">
                                 <div class="form-check sidebar-setting card-radio" data-bs-toggle="collapse"
@@ -1376,10 +1588,8 @@
                             </div>
                         </div>
                         <!-- end row -->
-
                         <div class="collapse" id="collapseBgGradient">
                             <div class="d-flex gap-2 flex-wrap img-switch p-2 px-3 bg-light rounded">
-
                                 <div class="form-check sidebar-setting card-radio">
                                     <input class="form-check-input" type="radio" name="data-sidebar"
                                         id="sidebar-color-gradient" value="gradient">
@@ -1415,11 +1625,9 @@
                             </div>
                         </div>
                     </div>
-
                     <div id="sidebar-img">
                         <h6 class="mt-4 mb-0 fw-semibold text-uppercase">Sidebar Images</h6>
                         <p class="text-muted">Choose a image of Sidebar.</p>
-
                         <div class="d-flex gap-2 flex-wrap img-switch">
                             <div class="form-check sidebar-setting card-radio">
                                 <input class="form-check-input" type="radio" name="data-sidebar-image"
@@ -1431,7 +1639,6 @@
                                     </span>
                                 </label>
                             </div>
-
                             <div class="form-check sidebar-setting card-radio">
                                 <input class="form-check-input" type="radio" name="data-sidebar-image"
                                     id="sidebarimg-01" value="img-1">
@@ -1440,7 +1647,6 @@
                                         class="avatar-md w-auto object-fit-cover">
                                 </label>
                             </div>
-
                             <div class="form-check sidebar-setting card-radio">
                                 <input class="form-check-input" type="radio" name="data-sidebar-image"
                                     id="sidebarimg-02" value="img-2">
@@ -1467,11 +1673,9 @@
                             </div>
                         </div>
                     </div>
-
                     <div id="preloader-menu">
                         <h6 class="mt-4 mb-0 fw-semibold text-uppercase">Preloader</h6>
                         <p class="text-muted">Choose a preloader.</p>
-
                         <div class="row">
                             <div class="col-4">
                                 <div class="form-check sidebar-setting card-radio">
@@ -1533,13 +1737,10 @@
                                 <h5 class="fs-13 text-center mt-2">Disable</h5>
                             </div>
                         </div>
-
                     </div>
                     <!-- end preloader-menu -->
-
                 </div>
             </div>
-
         </div>
         <div class="offcanvas-footer border-top p-3 text-center">
             <div class="row">
@@ -1553,7 +1754,9 @@
             </div>
         </div>
     </div>
-
+    <!-- +++++++++++++++++++++++++++++++++++++ -->
+    <!-- +++++++++++++++++++++++++++++++++++++ -->
+    <!-- +++++++++++++++++++++++++++++++++++++ -->
     <!-- JAVASCRIPT -->
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/libs/simplebar/simplebar.min.js"></script>
@@ -1561,24 +1764,29 @@
     <script src="assets/libs/feather-icons/feather.min.js"></script>
     <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
     <script src="assets/js/plugins.js"></script>
-
     <!-- apexcharts -->
     <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
-
     <!-- Vector map-->
     <script src="assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
     <script src="assets/libs/jsvectormap/maps/world-merc.js"></script>
-
     <!--Swiper slider js-->
     <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
-
     <!-- Dashboard init -->
     <script src="assets/js/pages/dashboard-ecommerce.init.js"></script>
-
     <!-- App js -->
     <script src="assets/js/app.js"></script>
-
     <script src="assets/js/directionChange.js"></script>
+    <!-- piecharts init -->
+    <script src="assets/js/pages/apexcharts-pie.init.js"></script>
+    <!-- linecharts init -->
+    <script src="assets/js/pages/apexcharts-line.init.js"></script>
+    <!--jquery cdn-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!--select2 cdn-->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <!-- select 2 init -->
+    <script src="assets/js/pages/select2.init.js"></script>
 </body>
 
 </html>
