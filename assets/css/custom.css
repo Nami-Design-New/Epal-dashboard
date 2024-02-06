@@ -2,6 +2,7 @@
   height: 22px;
   -o-object-fit: contain;
      object-fit: contain;
+  aspect-ratio: 1/1;
 }
 
 .menuLogo {
@@ -48,4 +49,10 @@
 
 .select2-container--default .select2-selection--multiple {
   min-height: 37.5px;
+}
+
+@media (max-width: 768px) {
+  :is([data-layout=vertical], [data-layout=semibox]) .horizontal-logo {
+    display: block;
+  }
 }/*# sourceMappingURL=custom.css.map */
