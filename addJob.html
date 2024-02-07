@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg"
     data-sidebar-image="none" data-preloader="disable" dir="ltr">
-
 <head>
     <meta charset="utf-8" />
     <title>Epal Dashboard</title>
@@ -28,7 +27,6 @@
     <!-- custom Css-->
     <link rel="stylesheet" href="assets/css/custom.css">
 </head>
-
 <body>
     <!-- Begin page -->
     <div id="layout-wrapper">
@@ -73,7 +71,6 @@
                                 <span class="mdi mdi-close-circle search-widget-icon search-widget-icon-close d-none"
                                     id="search-close-options"></span>
                             </div>
-                            
                             <div class="dropdown-menu dropdown-menu-lg" id="search-dropdown">
                                 <div data-simplebar style="max-height: 320px;">
                                     <!-- item-->
@@ -502,7 +499,7 @@
                         <div class="col-12 p-2">
                             <div class="card p-3">
                                 <div class="card-body">
-                                    <form action="#" class="form-steps" autocomplete="off">
+                                    <!-- <form action="#" class="form-steps" autocomplete="off">
                                         <div id="custom-progress-bar" class="progress-nav mb-4">
                                             <div class="progress" style="height: 1px;">
                                                 <div class="progress-bar" role="progressbar" style="width: 0%;"
@@ -511,9 +508,9 @@
                                             <ul class="nav nav-pills progress-bar-tab custom-nav" role="tablist">
                                                 <li class="nav-item" role="presentation">
                                                     <button class="nav-link rounded-pill active"
-                                                        data-progressbar="custom-progress-bar" id="pills-gen-info-tab"
-                                                        data-bs-toggle="pill" data-bs-target="#pills-gen-info"
-                                                        type="button" role="tab" aria-controls="pills-gen-info"
+                                                        data-progressbar="custom-progress-bar" id="pills-Client-tab"
+                                                        data-bs-toggle="pill" data-bs-target="#pills-Client"
+                                                        type="button" role="tab" aria-controls="pills-Client"
                                                         aria-selected="true">
                                                         <i class="ri-user-line"></i>
                                                     </button>
@@ -539,8 +536,8 @@
                                             </ul>
                                         </div>
                                         <div class="tab-content">
-                                            <div class="tab-pane fade show active" id="pills-gen-info" role="tabpanel"
-                                                aria-labelledby="pills-gen-info-tab">
+                                            <div class="tab-pane fade show active" id="pills-Client" role="tabpanel"
+                                                aria-labelledby="pills-Client-tab">
                                                 <div>
                                                     <div class="mb-4">
                                                         <div>
@@ -636,7 +633,7 @@
                                                 </div>
                                                 <div class="d-flex align-items-start gap-3 mt-4">
                                                     <button type="button"
-                                                        class="btn btn-success btn-label right ms-auto nexttab nexttab"
+                                                        class="btn btn-success btn-label right ms-auto nexttab "
                                                         data-nexttab="pills-info-desc-tab">
                                                         <i
                                                             class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>
@@ -683,12 +680,12 @@
                                                 <div class="d-flex align-items-start gap-3 mt-4">
                                                     <button type="button"
                                                         class="btn btn-link text-decoration-none btn-label previestab"
-                                                        data-previous="pills-gen-info-tab"><i
+                                                        data-previous="pills-Client-tab"><i
                                                             class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i>
                                                         Back
                                                     </button>
                                                     <button type="button"
-                                                        class="btn btn-success btn-label right ms-auto nexttab nexttab"
+                                                        class="btn btn-success btn-label right ms-auto nexttab "
                                                         data-nexttab="pills-success-tab"><i
                                                             class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>
                                                         Next
@@ -747,7 +744,7 @@
                                                     class="d-flex align-items-start justify-content-between gap-3 mt-4">
                                                     <button type="button"
                                                         class="btn btn-link text-decoration-none btn-label previestab"
-                                                        data-previous="pills-gen-info-tab"><i
+                                                        data-previous="pills-Client-tab"><i
                                                             class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i>
                                                         Back
                                                     </button>
@@ -756,7 +753,7 @@
                                                             Email Estimate
                                                         </button>
                                                         <button type="button"
-                                                            class="btn btn-success btn-label right ms-auto nexttab nexttab"
+                                                            class="btn btn-success btn-label right ms-auto nexttab "
                                                             data-nexttab="pills-success-tab"><i
                                                                 class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>
                                                             Generate
@@ -765,6 +762,199 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </form>
+ -->
+                                    <form action="#" class="form-steps" autocomplete="off">
+                                        <div class="step-arrow-nav mb-4">
+                                            <ul class="nav nav-pills custom-nav nav-justified" role="tablist">
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link active" id="steparrow-Client-tab" data-bs-toggle="pill" data-bs-target="#steparrow-Client" type="button" role="tab" aria-controls="steparrow-Client" aria-selected="true">Client</button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link " id="steparrow-Job-tab" data-bs-toggle="pill" data-bs-target="#steparrow-Job" type="button" role="tab" aria-controls="steparrow-Job" aria-selected="false">Job</button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link " id="steparrow-Summary-tab" data-bs-toggle="pill" data-bs-target="#steparrow-Summary" type="button" role="tab" aria-controls="steparrow-Summary" aria-selected="false">Summary</button>
+                                                </li>
+                                            
+                                            </ul>
+                                        </div>
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade show active" id="steparrow-Client" role="tabpanel" aria-labelledby="steparrow-Client-tab">
+                                                
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <ul class="nav nav-tabs mb-3" role="tablist">
+                                                            <li class="nav-item">
+                                                                <a class="nav-link active" data-bs-toggle="tab"
+                                                                    href="#existingClient" role="tab"
+                                                                    aria-selected="true">
+                                                                    Existing Client
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" data-bs-toggle="tab"
+                                                                    href="#newClient" role="tab"
+                                                                    aria-selected="false">
+                                                                    New Client
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="tab-content  text-muted">
+                                                            <div class="tab-pane active" id="existingClient"
+                                                                role="tabpanel">
+                                                                <div class="row">
+                                                                    <div class="col-12 p-2">
+                                                                        <div>
+                                                                            <label for="endDate"
+                                                                                class="form-label">Existing
+                                                                                Client</label>
+                                                                            <select class="form-select mb-3"
+                                                                                aria-label="Default select example">
+                                                                                <option selected="">Select existing
+                                                                                    client </option>
+                                                                                <option value="1">client1</option>
+                                                                                <option value="2">client2</option>
+                                                                                <option value="3">client3</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="tab-pane" id="newClient" role="tabpanel">
+                                                                <div class="row">
+                                                                    <div class="col-lg-3 col-md-6 col-12 p-2">
+                                                                        <div>
+                                                                            <label for="firstName"
+                                                                                class="form-label">First
+                                                                                Name</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="firstName"
+                                                                                placeholder="First Name">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-3 col-md-6 col-12 p-2">
+                                                                        <div>
+                                                                            <label for="lastName"
+                                                                                class="form-label">Last Name</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="lastName"
+                                                                                placeholder="Last Name">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-3 col-md-6 col-12 p-2">
+                                                                        <div>
+                                                                            <label for="phoneNumber"
+                                                                                class="form-label">Phone
+                                                                                Number</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="phoneNumber"
+                                                                                placeholder="xxxxxxxxxxxxx">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-3 col-md-6 col-12 p-2">
+                                                                        <div>
+                                                                            <label for="emailAddress"
+                                                                                class="form-label">Email
+                                                                                Address</label>
+                                                                            <input type="email" class="form-control"
+                                                                                id="emailAddress"
+                                                                                placeholder="email@example.cm">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="d-flex align-items-start gap-3 mt-4">
+                                                    <button type="button" class="btn btn-success btn-label right ms-auto nexttab " data-nexttab="steparrow-Job-tab"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to Job </button>
+                                                </div>
+                                            </div>
+                                            <!-- end tab pane -->
+                                            <div class="tab-pane fade " id="steparrow-Job" role="tabpanel" aria-labelledby="steparrow-Job-tab">
+                                                <div class="row">
+                                                    <div class="col-12 p-2">
+                                                        <div>
+                                                            <label for="jobName" class="form-label">Job Name
+                                                            </label>
+                                                            <input type="text" class="form-control" id="jobName"
+                                                                placeholder="Job Name">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 p-2">
+                                                        <div>
+                                                            <label for="description" class="form-label">Description
+                                                            </label>
+                                                            <textarea id="description" class="form-control"
+                                                                placeholder="Description"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 p-2">
+                                                        <div>
+                                                            <label for="formFileMultiple"
+                                                                class="form-label">Attachments (0)</label>
+                                                            <input class="form-control" type="file"
+                                                                id="formFileMultiple" multiple>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="d-flex align-items-start gap-3 mt-4">
+                                                    <button type="button" class="btn btn-light btn-label previestab" data-previous="steparrow-Client-tab"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Client</button>
+                                                    <button type="button" class="btn btn-success btn-label right ms-auto nexttab " data-nexttab="steparrow-Summary-tab"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Summary</button>
+                                                </div>
+                                            </div>
+                                            <!-- end tab pane -->
+                                            <div class="tab-pane fade " id="steparrow-Summary" role="tabpanel" aria-labelledby="steparrow-Summary-tab">
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6 col-12 p-2 d-flex gap-3">
+                                                        <h5 class="fw-semibold">Client Name:</h5>
+                                                        <p>test client</p>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-12 p-2 d-flex gap-3">
+                                                        <h5 class="fw-semibold">Job Name:</h5>
+                                                        <p>marketing</p>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-6 col-12 p-2">
+                                                        <div>
+                                                            <label for="amount" class="form-label">Amount</label>
+                                                            <input type="text" class="form-control" id="amount"
+                                                                placeholder="Job Amount">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-6 col-12 p-2">
+                                                        <div>
+                                                            <label for="estimateNumber" class="form-label">Estimate
+                                                                Number</label>
+                                                            <input type="text" class="form-control"
+                                                                id="estimateNumber"
+                                                                placeholder="Job Estimate Number">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-6 col-12 p-2">
+                                                        <div>
+                                                            <label for="startDate" class="form-label">Start
+                                                                Date</label>
+                                                            <input type="date" class="form-control" id="startDate">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-6 col-12 p-2">
+                                                        <div>
+                                                            <label for="endDate" class="form-label">End Date</label>
+                                                            <input type="date" class="form-control" id="endDate">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex align-items-start gap-3 mt-4">
+                                                    <button type="button" class="btn btn-light btn-label previestab" data-previous="steparrow-Job-tab"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Job</button>
+                                                    <button type="submit" class="btn btn-success btn-label right ms-auto "><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Submit</button>
+                                                </div>
+                                            </div>
+                                           
+                                        </div>
+                                        <!-- end tab content -->
                                     </form>
                                 </div>
                             </div>
@@ -1592,6 +1782,7 @@
     <!-- App js -->
     <script src="assets/js/app.js"></script>
     <script src="assets/js/directionChange.js"></script>
+    <script src="assets/js/wizard.js"></script>
     <!-- piecharts init -->
     <script src="assets/js/pages/apexcharts-costom.js"></script>
     <!--jquery cdn-->
@@ -1612,5 +1803,4 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
     <script src="assets/js/pages/datatables.init.js"></script>
 </body>
-
 </html>
