@@ -173,8 +173,7 @@
                                 </form>
                             </div>
                         </div>
-                                                <button id="toggleDirectionBtn" class="btn text-dark  btn-ghost-secondary"> عربي </button>
-
+                        <button id="toggleDirectionBtn" class="btn text-dark  btn-ghost-secondary"> عربي </button>
                         <div class="ms-1 header-item d-none d-sm-flex">
                             <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle"
                                 data-toggle="fullscreen">
@@ -458,7 +457,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link menu-link" href="vendors.html">
-                                <i class="ri-shuffle-line"></i> <span data-key="t-Vendors">Vendors</span>
+                                <i class="ri-shuffle-line"></i> <span data-key="t-Vendors">Contractors</span>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -466,6 +465,7 @@
                                 <i class="ri-group-line"></i> <span data-key="t-Clients">Clients</span>
                             </a>
                         </li>
+                        <li class="menu-title"><span data-key="t-settings">Settings</span></li>
                         <li class="nav-item">
                             <a class="nav-link menu-link" href="companies.html">
                                 <i class="ri-profile-line"></i> <span data-key="t-Companies">Companies</span>
@@ -497,12 +497,8 @@
             <div class="page-content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-12 p-2 d-flex justify-content-between align-content-center">
+                        <div class="col-12 p-2 ">
                             <h2>Payments</h2>
-                            <button type="button" class="btn btn-soft-success" data-bs-toggle="modal"
-                                data-bs-target="#addExpense">
-                                <i class="ri-add-circle-line align-middle me-1"></i> Add New Expense
-                            </button>
                         </div>
                         <div class="col-12 p-2">
                             <div class="card p-4">
@@ -604,7 +600,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-3">
-                                    <div class="card card-animate">
+                                    <a href="totalPayments.html" class="card card-animate">
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between">
                                                 <div class="pt-2">
@@ -621,17 +617,20 @@
                                                 </div>
                                                 <div>
                                                     <div class="avatar-sm flex-shrink-0">
-                                                        <span class="avatar-title bg-info-subtle rounded-circle fs-2">
-                                                            <i data-feather="activity" class="text-info"></i>
+                                                        <span class="avatar-title bg-info-subtle rounded-circle fs-2"
+                                                            role="button" data-bs-toggle="modal"
+                                                            data-bs-target="#addExpense"
+                                                            onclick="event.preventDefault()">
+                                                            <i data-feather="plus" class="text-info"></i>
                                                         </span>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
                                 <div class="col-md-3">
-                                    <div class="card card-animate">
+                                    <a href="totalExpenses.html" class="card card-animate">
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between">
                                                 <div class="pt-2">
@@ -648,17 +647,20 @@
                                                 </div>
                                                 <div>
                                                     <div class="avatar-sm flex-shrink-0">
-                                                        <span class="avatar-title bg-info-subtle rounded-circle fs-2">
-                                                            <i data-feather="activity" class="text-info"></i>
+                                                        <span class="avatar-title bg-info-subtle rounded-circle fs-2"
+                                                            role="button" data-bs-toggle="modal"
+                                                            data-bs-target="#addExpense"
+                                                            onclick="event.preventDefault()">
+                                                            <i data-feather="plus" class="text-info"></i>
                                                         </span>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
                                 <div class="col-md-3">
-                                    <div class="card card-animate">
+                                    <a href="totalGlobalExpenses.html" class="card card-animate">
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between">
                                                 <div class="pt-2">
@@ -675,14 +677,17 @@
                                                 </div>
                                                 <div>
                                                     <div class="avatar-sm flex-shrink-0">
-                                                        <span class="avatar-title bg-info-subtle rounded-circle fs-2">
-                                                            <i data-feather="activity" class="text-info"></i>
+                                                        <span class="avatar-title bg-info-subtle rounded-circle fs-2"
+                                                            role="button" data-bs-toggle="modal"
+                                                            data-bs-target="#addExpense"
+                                                            onclick="event.preventDefault()">
+                                                            <i data-feather="plus" class="text-info"></i>
                                                         </span>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
