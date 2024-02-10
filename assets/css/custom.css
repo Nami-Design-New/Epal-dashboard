@@ -55,4 +55,7 @@
   :is([data-layout=vertical], [data-layout=semibox]) .horizontal-logo {
     display: block;
   }
+}
+.attForm .attt {
+  border-bottom: 1px dashed #ced4da;
 }/*# sourceMappingURL=custom.css.map */

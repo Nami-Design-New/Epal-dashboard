@@ -173,7 +173,7 @@
                                 </form>
                             </div>
                         </div>
-                                                <button id="toggleDirectionBtn" class="btn text-dark  btn-ghost-secondary"> عربي </button>
+                        <button id="toggleDirectionBtn" class="btn text-dark  btn-ghost-secondary"> عربي </button>
 
                         <div class="ms-1 header-item d-none d-sm-flex">
                             <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle"
@@ -372,7 +372,7 @@
                                     <span class="align-middle">Profile</span>
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#!">
+                                <a class="dropdown-item" href="settings.html">
                                     <i class="mdi mdi-cog-outline text-muted fs-16 align-middle me-1"></i>
                                     <span class="align-middle">Settings</span>
                                 </a>
@@ -501,86 +501,186 @@
                         <div class="col-12 p-2 ">
                             <h2>Add New Company</h2>
                         </div>
-                        <div class="col-12 p-2">
-                            <div class="card">
+                        <div class="col-lg-2 col-12 p-2">
+                            <div class="card h-100 m-0">
                                 <div class="card-body">
-                                    <form action="" class="row p-2">
-                                        <div class="col-12 p-2">
-                                            <h2 class="mt-2 mb-2">Company Info</h2>
+                                    <div class="nav flex-column nav-pills text-center" id="v-pills-tab" role="tablist"
+                                        aria-orientation="vertical">
+                                        <!-- tab btn -->
+                                        <a class="nav-link mb-2 active" id="v-pills-comapnyInfo-tab"
+                                            data-bs-toggle="pill" href="#v-pills-comapnyInfo" role="tab"
+                                            aria-controls="v-pills-comapnyInfo" aria-selected="true">
+                                            Company Info
+                                        </a>
+                                        <!-- tab btn -->
+                                        <a class="nav-link mb-2" id="v-pills-contactInfo-tab" data-bs-toggle="pill"
+                                            href="#v-pills-contactInfo" role="tab" aria-controls="v-pills-contactInfo"
+                                            aria-selected="false">
+                                            Contact Info
+                                        </a>
+                                        <!-- tab btn -->
+                                        <a class="nav-link mb-2" id="v-pills-attachments-tab" data-bs-toggle="pill"
+                                            href="#v-pills-attachments" role="tab" aria-controls="v-pills-attachments"
+                                            aria-selected="false">
+                                            Attachments
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-10 col-12 p-2">
+                            <div class="card h-100 m-0">
+                                <div class="card-body">
+                                    <div class="tab-content text-muted mt-4 mt-md-0 h-100" id="v-pills-tabContent">
+                                        <div class="tab-pane fade show active h-100" id="v-pills-comapnyInfo"
+                                            role="tabpanel" aria-labelledby="v-pills-comapnyInfo-tab">
+                                            <form action="" class="row m-0 h-100">
+                                                <div class="col-lg-6 col-md-6 col-12 p-2">
+                                                    <div>
+                                                        <label for="companyName" class="form-label">Company Name</label>
+                                                        <input type="text" class="form-control" id="companyName"
+                                                            placeholder="Company Name">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-12 p-2">
+                                                    <div>
+                                                        <label for="website" class="form-label">Website</label>
+                                                        <input type="text" class="form-control" id="website"
+                                                            placeholder="https://example.com">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 p-2 d-flex justify-content-end mt-auto">
+                                                    <button class="btn btn-success fs-7 fw-medium" type="submit">
+                                                        Save
+                                                    </button>
+                                                </div>
+                                            </form>
                                         </div>
-                                        <div class="col-lg-4 col-md-6 col-12 p-2">
-                                            <div>
-                                                <label for="companyName" class="form-label">Company Name</label>
-                                                <input type="text" class="form-control" id="companyName"
-                                                    placeholder="Company Name">
-                                            </div>
+                                        <div class="tab-pane fade h-100" id="v-pills-contactInfo" role="tabpanel"
+                                            aria-labelledby="v-pills-contactInfo-tab">
+                                            <form action="" class="h-100 m-0 row">
+                                                <div class="col-lg-4 col-md-6 col-12 p-2">
+                                                    <div>
+                                                        <label for="cellPhone" class="form-label">Cell Phone</label>
+                                                        <input type="text" class="form-control" id="cellPhone"
+                                                            placeholder="xxxxxxxxxxxxx">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-6 col-12 p-2">
+                                                    <div>
+                                                        <label for="faxNmber" class="form-label">Fax Number</label>
+                                                        <input type="text" class="form-control" id="faxNmber"
+                                                            placeholder="xxxxxxxxxxxxx">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-6 col-12 p-2">
+                                                    <div>
+                                                        <label for="homePhone" class="form-label">Home Phone</label>
+                                                        <input type="text" class="form-control" id="homePhone"
+                                                            placeholder="xxxxxxxxxxxxx">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-6 col-12 p-2">
+                                                    <label class="form-label">Select Country</label>
+                                                    <select class="js-example-basic-single" name="state">
+                                                        <option value="AL">Alabama</option>
+                                                        <option value="MA">Madrid</option>
+                                                        <option value="TO">Toronto</option>
+                                                        <option value="LO">Londan</option>
+                                                        <option value="WY">Wyoming</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-4 col-md-6 col-12 p-2">
+                                                    <div>
+                                                        <label for="perferArea" class="form-label">Perfer Area</label>
+                                                        <input type="text" class="form-control" id="perferArea"
+                                                            placeholder="Perfer Area">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-6 col-12 p-2">
+                                                    <div>
+                                                        <label for="Address1" class="form-label">Address 1</label>
+                                                        <input type="text" class="form-control" id="Address1"
+                                                            placeholder="Address 1">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-6 col-12 p-2">
+                                                    <div>
+                                                        <label for="Address2" class="form-label">Address 2</label>
+                                                        <input type="text" class="form-control" id="Address2"
+                                                            placeholder="Address 2">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-6 col-12 p-2">
+                                                    <div>
+                                                        <label for="Appartment" class="form-label">Appartment</label>
+                                                        <input type="text" class="form-control" id="Appartment"
+                                                            placeholder="Appartment">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-6 col-12 p-2">
+                                                    <div>
+                                                        <label for="ZIP" class="form-label">ZIP</label>
+                                                        <input type="text" class="form-control" id="ZIP"
+                                                            placeholder="ZIP Code">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 p-2 d-flex justify-content-end mt-auto">
+                                                    <button class="btn btn-success fs-7 fw-medium" type="submit">
+                                                        Save
+                                                    </button>
+                                                </div>
+                                            </form>
                                         </div>
-                                        <div class="col-lg-4 col-md-6 col-12 p-2">
-                                            <div>
-                                                <label for="faxNmber" class="form-label">Fax Number</label>
-                                                <input type="text" class="form-control" id="faxNmber"
-                                                    placeholder="xxxxxxxxxxxxx">
-                                            </div>
+                                        <div class="tab-pane fade h-100" id="v-pills-attachments" role="tabpanel"
+                                            aria-labelledby="v-pills-attachments-tab">
+                                            <form action="" class="row h-100 m-0 ">
+                                                <div class="col-12 p-2 d-flex justify-content-end">
+                                                    <button class="btn btn-success fs-6 fw-medium"
+                                                        id="addAttachmentButton">
+                                                        <i class="ri-add-circle-line"></i> Add Attachment
+                                                    </button>
+                                                </div>
+                                                <div id="attachmentFormContainer" class="p-0">
+                                                    <div class="col-12 p-2">
+                                                        <div class="row m-0">
+                                                            <div class="col-lg-6 col-md-6 col-12 p-2">
+                                                                <div>
+                                                                    <label for="attachmentName"
+                                                                        class="form-label">Attachment Name</label>
+                                                                    <input type="text" class="form-control"
+                                                                        id="attachmentName"
+                                                                        placeholder="Ex : company logo">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6 col-md-6 col-12 p-2">
+                                                                <div>
+                                                                    <label for="expireDate"
+                                                                        class="form-label">Expiration
+                                                                        Date</label>
+                                                                    <input type="date" class="form-control"
+                                                                        id="expireDate">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 p-2">
+                                                                <div>
+                                                                    <label for="formFileMultiple"
+                                                                        class="form-label">Attachment</label>
+                                                                    <input class="form-control" type="file"
+                                                                        id="formFileMultiple">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 p-2 d-flex justify-content-end mt-auto">
+                                                    <button class="btn btn-success fs-7 fw-medium" type="submit">
+                                                        Save
+                                                    </button>
+                                                </div>
+                                            </form>
                                         </div>
-                                        <div class="col-lg-4 col-md-6 col-12 p-2">
-                                            <div>
-                                                <label for="phoneNumber" class="form-label">Phone Number</label>
-                                                <input type="text" class="form-control" id="phoneNumber"
-                                                    placeholder="xxxxxxxxxxxxx">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 p-2">
-                                            <div>
-                                                <label for="website" class="form-label">Website</label>
-                                                <input type="text" class="form-control" id="website"
-                                                    placeholder="https://example.com">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 p-2">
-                                            <h2 class="mt-2 mb-2">Company Address</h2>
-                                        </div>
-                                        <div class="col-lg-3 col-md-6 col-12 p-2">
-                                            <div>
-                                                <label for="Address1" class="form-label">Address 1</label>
-                                                <input type="text" class="form-control" id="Address1"
-                                                    placeholder="Address 1">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-md-6 col-12 p-2">
-                                            <div>
-                                                <label for="Address2" class="form-label">Address 2</label>
-                                                <input type="text" class="form-control" id="Address2"
-                                                    placeholder="Address 2">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-md-6 col-12 p-2">
-                                            <label class="form-label">Select Country</label>
-                                            <select class="js-example-basic-single" name="state">
-                                                <option value="AL">Alabama</option>
-                                                <option value="MA">Madrid</option>
-                                                <option value="TO">Toronto</option>
-                                                <option value="LO">Londan</option>
-                                                <option value="WY">Wyoming</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-lg-3 col-md-6 col-12 p-2">
-                                            <div>
-                                                <label for="ZIP" class="form-label">ZIP</label>
-                                                <input type="text" class="form-control" id="ZIP" placeholder="ZIP Code">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 p-2">
-                                            <div>
-                                                <label for="formFileMultiple" class="form-label">Attachments (0)</label>
-                                                <input class="form-control" type="file" id="formFileMultiple" multiple>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 p-2 d-flex justify-content-end">
-                                            <button class="btn btn-success fs-7 fw-medium" type="submit">
-                                                Save
-                                            </button>
-                                        </div>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1426,6 +1526,41 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
     <script src="assets/js/pages/datatables.init.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const addButton = document.querySelector("#addAttachmentButton");
+            const formContainer = document.querySelector("#attachmentFormContainer");
+
+            addButton.addEventListener("click", function (event) {
+                event.preventDefault();
+                const attachmentHTML = `
+                    <div class="col-12 p-2">
+                        <div class="row m-0">
+                            <div class="col-lg-6 col-md-6 col-12 p-2">
+                                <div>
+                                    <label for="attachmentName" class="form-label">Attachment Name</label>
+                                    <input type="text" class="form-control" id="attachmentName" placeholder="Ex : company logo">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12 p-2">
+                                <div>
+                                    <label for="expireDate" class="form-label">Expiration Date</label>
+                                    <input type="date" class="form-control" id="expireDate">
+                                </div>
+                            </div>
+                            <div class="col-12 p-2">
+                                <div>
+                                    <label for="formFileMultiple" class="form-label">Attachment</label>
+                                    <input class="form-control" type="file" id="formFileMultiple">
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
+                formContainer.insertAdjacentHTML("beforeend", attachmentHTML);
+            });
+        });
+    </script>
+
 </body>
 
 </html>
