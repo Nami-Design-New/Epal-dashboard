@@ -1189,10 +1189,10 @@
           sessionStorage.setItem("data-appColor", "default");
           document.documentElement.setAttribute("data-appColor", "default");
           break;
-        case "orange":
-          T("data-appColor", "orange");
-          sessionStorage.setItem("data-appColor", "orange");
-          document.documentElement.setAttribute("data-appColor", "orange");
+        case "rose":
+          T("data-appColor", "rose");
+          sessionStorage.setItem("data-appColor", "rose");
+          document.documentElement.setAttribute("data-appColor", "rose");
           break;
         case "red":
           T("data-appColor", "red");

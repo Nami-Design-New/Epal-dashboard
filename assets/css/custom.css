@@ -63,3 +63,9 @@
 .form-label {
   text-transform: capitalize;
 }/*# sourceMappingURL=custom.css.map */
+
+
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__display{
+  color: white;
+}

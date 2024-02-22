@@ -4526,21 +4526,15 @@ code {
     --vz-vertical-menu-dropdown-box-shadow: 0 2px 4px rgba(15, 34, 58, 0.12)
 }
 
-:root[data-appColor=orange] {
-    --vz-vertical-menu-bg: orange;
-    --vz-vertical-menu-border: #405189;
-    --vz-vertical-menu-item-color: #abb9e8;
-    --vz-vertical-menu-item-bg: rgba(255, 255, 255, 0.15);
-    --vz-vertical-menu-item-hover-color: #fff;
-    --vz-vertical-menu-item-active-color: #fff;
-    --vz-vertical-menu-item-active-bg: rgba(255, 255, 255, 0.15);
-    --vz-vertical-menu-sub-item-color: #abb9e8;
-    --vz-vertical-menu-sub-item-hover-color: #fff;
-    --vz-vertical-menu-sub-item-active-color: #fff;
-    --vz-vertical-menu-title-color: #838fb9;
-    --vz-twocolumn-menu-iconview-bg: #435590;
-    --vz-vertical-menu-box-shadow: 0 2px 4px rgba(15, 34, 58, 0.12);
-    --vz-vertical-menu-dropdown-box-shadow: 0 2px 4px rgba(15, 34, 58, 0.12)
+:root[data-appColor=rose] {
+    --vz-vertical-menu-bg: #FF407D;
+    --vz-vertical-menu-border: #FF407D;
+    --vz-vertical-menu-item-color: #ffcbdf;
+    --vz-vertical-menu-sub-item-color: #ffcbdf;
+    --vz-vertical-menu-title-color: #ffa8c3;
+    --vz-twocolumn-menu-iconview-bg: #a11e48;
+    --vz-vertical-menu-box-shadow: 0 2px 4px #FF407D1f;
+    --vz-vertical-menu-dropdown-box-shadow: 0 2px 4px #FF407D1f;
 }
 
 :root[data-appColor=red] {
