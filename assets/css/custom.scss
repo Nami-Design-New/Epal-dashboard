@@ -54,7 +54,68 @@
   border-bottom: 1px dashed #ced4da;
 }
 
-
-.form-label{
+.form-label {
   text-transform: capitalize;
+}
+
+#back-to-top {
+  bottom: 70px;
+}
+.filepond--panel-root {
+  border: 0 !important;
+  background: var(--vz-body-bg) !important;
+}
+.filepond--root[data-style-panel-layout~=circle] .filepond--action-edit-item {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.btnn {
+  outline: none;
+  border: none;
+  background: none;
+  padding: 0 2px;
+  i {
+    font-size: 12px;
+  }
+  &.bttn-danger {
+    i {
+      color: rgb(241, 31, 31);
+    }
+  }
+  &.bttn-dark {
+    i {
+      color: rgb(0, 0, 0);
+    }
+  }
+  &.bttn-success {
+    i {
+      color: #0ab39c;
+    }
+  }
+}
+.expire-code {
+  width: fit-content;
+  margin: auto;
+  padding: 5px 10px;
+  border-radius: 5px;
+  &.success {
+    color: #fff;
+    background: #0ab39c;
+  }
+  &.danger {
+    color: #fff;
+    background: rgb(241, 31, 31);
+  }
+  &.warning {
+    color: #fff;
+    background: rgb(255, 193, 7);
+  }
+}
+#attachmentFormContainer {
+  background: var(--vz-body-bg);
+  border-radius: 6px;
+  padding: 8px !important;
+  .filepond--panel-root {
+    background-color: var(--vz-input-bg-custom) !important;
+  }
 }

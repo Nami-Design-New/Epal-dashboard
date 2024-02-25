@@ -62,10 +62,66 @@
 
 .form-label {
   text-transform: capitalize;
-}/*# sourceMappingURL=custom.css.map */
-
-
-
-.select2-container--default .select2-selection--multiple .select2-selection__choice__display{
-  color: white;
 }
+
+#back-to-top {
+  bottom: 70px;
+}
+
+.filepond--panel-root {
+  border: 0 !important;
+  background: var(--vz-body-bg) !important;
+}
+
+.filepond--root[data-style-panel-layout~=circle] .filepond--action-edit-item {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.btnn {
+  outline: none;
+  border: none;
+  background: none;
+  padding: 0 2px;
+}
+.btnn i {
+  font-size: 12px;
+}
+.btnn.bttn-danger i {
+  color: rgb(241, 31, 31);
+}
+.btnn.bttn-dark i {
+  color: rgb(0, 0, 0);
+}
+.btnn.bttn-success i {
+  color: #0ab39c;
+}
+
+.expire-code {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.expire-code.success {
+  color: #fff;
+  background: #0ab39c;
+}
+.expire-code.danger {
+  color: #fff;
+  background: rgb(241, 31, 31);
+}
+.expire-code.warning {
+  color: #fff;
+  background: rgb(255, 193, 7);
+}
+
+#attachmentFormContainer {
+  background: var(--vz-body-bg);
+  border-radius: 6px;
+  padding: 8px !important;
+}
+#attachmentFormContainer .filepond--panel-root {
+  background-color: var(--vz-input-bg-custom) !important;
+}/*# sourceMappingURL=custom.css.map */
