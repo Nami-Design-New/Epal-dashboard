@@ -119,3 +119,24 @@
     background-color: var(--vz-input-bg-custom) !important;
   }
 }
+.job_card {
+  background: var(--vz-body-bg) !important;
+  .pro_img {
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+    border: 1px solid #ced4da;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+.list{
+  margin-left: auto;
+  img{
+    height: 100px;
+  }
+}

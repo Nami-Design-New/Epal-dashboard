@@ -1,0 +1,1907 @@
+<!doctype html>
+<html lang="en" data-appColor="default" data-layout="vertical" data-topbar="light" data-sidebar="dark"
+    data-sidebar-size="lg" data-sidebar-image="none" data-preloader="enable" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Epal Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Epal Solutions Admin & Dashboard" name="description" />
+    <meta content="Epal Solutions" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/fav.svg">
+    <!-- Layout config Js -->
+    <script src="assets/js/layout.js"></script>
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrapCss" rel="stylesheet" />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" />
+    <!--datatable css-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" />
+    <!--datatable responsive css-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
+    <!-- select2 Css-->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" id="appCss" rel="stylesheet" />
+    <!-- custom Css-->
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <!-- filepond -->
+    <link rel="stylesheet" href="assets/css/filepond.min.css">
+</head>
+
+
+<body>
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+        <header id="page-topbar">
+            <div class="layout-width">
+                <div class="navbar-header">
+                    <div class="d-flex">
+                        <!-- LOGO -->
+                        <div class="navbar-brand-box horizontal-logo">
+                            <a href="index.html" class="logo logo-dark">
+                                <span class="logo-sm">
+                                    <img src="assets/images/fav.svg" alt="" class="menuFav">
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="assets/images/logo-dark.png" alt="" class="menuLogo">
+                                </span>
+                            </a>
+                            <a href="index.html" class="logo logo-light">
+                                <span class="logo-sm">
+                                    <img src="assets/images/fav.svg" alt="" class="menuFav">
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="assets/images/logo-light.png" alt="" class="menuLogo">
+                                </span>
+                            </a>
+                        </div>
+                        <button type="button"
+                            class="btn btn-sm px-3 fs-16 header-item vertical-menu-btn topnav-hamburger"
+                            id="topnav-hamburger-icon">
+                            <span class="hamburger-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
+                        <!-- App Search-->
+                        <form class="app-search d-none d-md-block">
+                            <div class="position-relative">
+                                <input type="text" class="form-control" placeholder="Search..." autocomplete="off"
+                                    id="search-options" value="">
+                                <span class="mdi mdi-magnify search-widget-icon"></span>
+                                <span class="mdi mdi-close-circle search-widget-icon search-widget-icon-close d-none"
+                                    id="search-close-options"></span>
+                            </div>
+                            <div class="dropdown-menu dropdown-menu-lg" id="search-dropdown">
+                                <div data-simplebar style="max-height: 320px;">
+                                    <!-- item-->
+                                    <div class="dropdown-header">
+                                        <h6 class="text-overflow text-muted mb-0 text-uppercase">Recent Searches</h6>
+                                    </div>
+                                    <div class="dropdown-item bg-transparent text-wrap">
+                                        <a href="index.html" class="btn btn-soft-secondary btn-sm rounded-pill">how to
+                                            setup <i class="mdi mdi-magnify ms-1"></i></a>
+                                        <a href="index.html" class="btn btn-soft-secondary btn-sm rounded-pill">buttons
+                                            <i class="mdi mdi-magnify ms-1"></i></a>
+                                    </div>
+                                    <!-- item-->
+                                    <div class="dropdown-header mt-2">
+                                        <h6 class="text-overflow text-muted mb-1 text-uppercase">Pages</h6>
+                                    </div>
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <i class="ri-bubble-chart-line align-middle fs-18 text-muted me-2"></i>
+                                        <span>Analytics Dashboard</span>
+                                    </a>
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <i class="ri-lifebuoy-line align-middle fs-18 text-muted me-2"></i>
+                                        <span>Help Center</span>
+                                    </a>
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <i class="ri-user-settings-line align-middle fs-18 text-muted me-2"></i>
+                                        <span>My account settings</span>
+                                    </a>
+                                    <!-- item-->
+                                    <div class="dropdown-header mt-2">
+                                        <h6 class="text-overflow text-muted mb-2 text-uppercase">Members</h6>
+                                    </div>
+                                    <div class="notification-list">
+                                        <!-- item -->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item py-2">
+                                            <div class="d-flex">
+                                                <img src="assets/images/users/avatar-2.jpg"
+                                                    class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                                <div class="flex-grow-1">
+                                                    <h6 class="m-0">Angela Bernier</h6>
+                                                    <span class="fs-11 mb-0 text-muted">Manager</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- item -->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item py-2">
+                                            <div class="d-flex">
+                                                <img src="assets/images/users/avatar-3.jpg"
+                                                    class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                                <div class="flex-grow-1">
+                                                    <h6 class="m-0">David Grasso</h6>
+                                                    <span class="fs-11 mb-0 text-muted">Web Designer</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- item -->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item py-2">
+                                            <div class="d-flex">
+                                                <img src="assets/images/users/avatar-5.jpg"
+                                                    class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                                <div class="flex-grow-1">
+                                                    <h6 class="m-0">Mike Bunch</h6>
+                                                    <span class="fs-11 mb-0 text-muted">React Developer</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="text-center pt-3 pb-1">
+                                    <a href="pages-search-results.html" class="btn btn-primary btn-sm">View All Results
+                                        <i class="ri-arrow-right-line ms-1"></i></a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="dropdown d-md-none topbar-head-dropdown header-item">
+                            <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle"
+                                id="page-header-search-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <i class="bx bx-search fs-22"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                                aria-labelledby="page-header-search-dropdown">
+                                <form class="p-3">
+                                    <div class="form-group m-0">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search ..."
+                                                aria-label="Recipient's username">
+                                            <button class="btn btn-primary" type="submit"><i
+                                                    class="mdi mdi-magnify"></i></button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <button id="toggleDirectionBtn" class="btn text-dark  btn-ghost-secondary"> عربي </button>
+                        <div class="ms-1 header-item d-none d-sm-flex">
+                            <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle"
+                                data-toggle="fullscreen">
+                                <i class='bx bx-fullscreen fs-22'></i>
+                            </button>
+                        </div>
+                        <div class="ms-1 header-item d-none d-sm-flex">
+                            <button type="button"
+                                class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle light-dark-mode">
+                                <i class='bx bx-moon fs-22'></i>
+                            </button>
+                        </div>
+                        <div class="dropdown topbar-head-dropdown ms-1 header-item" id="notificationDropdown">
+                            <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle"
+                                id="page-header-notifications-dropdown" data-bs-toggle="dropdown"
+                                data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">
+                                <i class='bx bx-bell fs-22'></i>
+                                <span
+                                    class="position-absolute topbar-badge fs-10 translate-middle badge rounded-pill bg-danger">3<span
+                                        class="visually-hidden">unread messages</span></span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                                aria-labelledby="page-header-notifications-dropdown">
+                                <div class="dropdown-head bg-primary bg-pattern rounded-top">
+                                    <div class="p-3">
+                                        <div class="row align-items-center">
+                                            <div class="col">
+                                                <h6 class="m-0 fs-16 fw-semibold text-white"> Notifications </h6>
+                                            </div>
+                                            <div class="col-auto dropdown-tabs">
+                                                <span class="badge bg-light-subtle text-body fs-13"> 4 New</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="px-2 pt-2">
+                                        <ul class="nav nav-tabs dropdown-tabs nav-tabs-custom" data-dropdown-tabs="true"
+                                            id="notificationItemsTab" role="tablist">
+                                            <li class="nav-item waves-effect waves-light">
+                                                <a class="nav-link active" data-bs-toggle="tab" href="#messages-tab"
+                                                    role="tab" aria-selected="true">
+                                                    Messages
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="tab-content position-relative" id="notificationItemsTabContent">
+                                    <div class="tab-pane fade show active py-2 ps-2" id="messages-tab" role="tabpanel"
+                                        aria-labelledby="messages-tab">
+                                        <div data-simplebar style="max-height: 300px;" class="pe-2">
+                                            <div class="text-reset notification-item d-block dropdown-item">
+                                                <div class="d-flex">
+                                                    <img src="assets/images/users/avatar-3.jpg"
+                                                        class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                                    <div class="flex-grow-1">
+                                                        <a href="#!" class="stretched-link">
+                                                            <h6 class="mt-0 mb-1 fs-13 fw-semibold">James Lemire</h6>
+                                                        </a>
+                                                        <div class="fs-13 text-muted">
+                                                            <p class="mb-1">We talked about a project on linkedin.</p>
+                                                        </div>
+                                                        <p class="mb-0 fs-11 fw-medium text-uppercase text-muted">
+                                                            <span><i class="mdi mdi-clock-outline"></i> 30 min
+                                                                ago</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="px-2 fs-15">
+                                                        <div class="form-check notification-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="messages-notification-check01">
+                                                            <label class="form-check-label"
+                                                                for="messages-notification-check01"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text-reset notification-item d-block dropdown-item">
+                                                <div class="d-flex">
+                                                    <img src="assets/images/users/avatar-2.jpg"
+                                                        class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                                    <div class="flex-grow-1">
+                                                        <a href="#!" class="stretched-link">
+                                                            <h6 class="mt-0 mb-1 fs-13 fw-semibold">Angela Bernier</h6>
+                                                        </a>
+                                                        <div class="fs-13 text-muted">
+                                                            <p class="mb-1">Answered to your comment on the cash flow
+                                                                forecast's
+                                                                graph 🔔.</p>
+                                                        </div>
+                                                        <p class="mb-0 fs-11 fw-medium text-uppercase text-muted">
+                                                            <span><i class="mdi mdi-clock-outline"></i> 2 hrs ago</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="px-2 fs-15">
+                                                        <div class="form-check notification-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="messages-notification-check02">
+                                                            <label class="form-check-label"
+                                                                for="messages-notification-check02"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text-reset notification-item d-block dropdown-item">
+                                                <div class="d-flex">
+                                                    <img src="assets/images/users/avatar-6.jpg"
+                                                        class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                                    <div class="flex-grow-1">
+                                                        <a href="#!" class="stretched-link">
+                                                            <h6 class="mt-0 mb-1 fs-13 fw-semibold">Kenneth Brown</h6>
+                                                        </a>
+                                                        <div class="fs-13 text-muted">
+                                                            <p class="mb-1">Mentionned you in his comment on 📃 invoice
+                                                                #12501.
+                                                            </p>
+                                                        </div>
+                                                        <p class="mb-0 fs-11 fw-medium text-uppercase text-muted">
+                                                            <span><i class="mdi mdi-clock-outline"></i> 10 hrs
+                                                                ago</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="px-2 fs-15">
+                                                        <div class="form-check notification-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="messages-notification-check03">
+                                                            <label class="form-check-label"
+                                                                for="messages-notification-check03"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text-reset notification-item d-block dropdown-item">
+                                                <div class="d-flex">
+                                                    <img src="assets/images/users/avatar-8.jpg"
+                                                        class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                                    <div class="flex-grow-1">
+                                                        <a href="#!" class="stretched-link">
+                                                            <h6 class="mt-0 mb-1 fs-13 fw-semibold">Maureen Gibson</h6>
+                                                        </a>
+                                                        <div class="fs-13 text-muted">
+                                                            <p class="mb-1">We talked about a project on linkedin.</p>
+                                                        </div>
+                                                        <p class="mb-0 fs-11 fw-medium text-uppercase text-muted">
+                                                            <span><i class="mdi mdi-clock-outline"></i> 3 days
+                                                                ago</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="px-2 fs-15">
+                                                        <div class="form-check notification-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="messages-notification-check04">
+                                                            <label class="form-check-label"
+                                                                for="messages-notification-check04"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="my-3 text-center view-all">
+                                                <button type="button"
+                                                    class="btn btn-soft-success waves-effect waves-light">View
+                                                    All Messages <i
+                                                        class="ri-arrow-right-line align-middle"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="notification-actions" id="notification-actions">
+                                        <div class="d-flex text-muted justify-content-center">
+                                            Select <div id="select-content" class="text-body fw-semibold px-1">0</div>
+                                            Result <button type="button" class="btn btn-link link-danger p-0 ms-3"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#removeNotificationModal">Remove</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown ms-sm-3 header-item topbar-user">
+                            <button type="button" class="btn" id="page-header-user-dropdown" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <span class="d-flex align-items-center">
+                                    <img class="rounded-circle header-profile-user"
+                                        src="assets/images/users/user-dummy-img.jpg" alt="Header Avatar">
+                                    <span class="text-start ms-xl-2">
+                                        <span class="d-none d-xl-inline-block ms-1 fw-medium user-name-text"> MR . Waled
+                                        </span>
+                                        <span class="d-none d-xl-block ms-1 fs-12 user-name-sub-text">Founder</span>
+                                    </span>
+                                </span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <!-- item-->
+                                <h6 class="dropdown-header">Welcome MR . Waled!</h6>
+                                <a class="dropdown-item" href="#!">
+                                    <i class="mdi mdi-account-circle text-muted fs-16 align-middle me-1"></i>
+                                    <span class="align-middle">Profile</span>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="settings.html">
+                                    <i class="mdi mdi-cog-outline text-muted fs-16 align-middle me-1"></i>
+                                    <span class="align-middle">Settings</span>
+                                </a>
+                                <a class="dropdown-item" href="#!">
+                                    <i class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i>
+                                    <span class="align-middle">Logout</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- removeNotificationModal -->
+        <div id="removeNotificationModal" class="modal fade zoomIn" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                            id="NotificationModalbtn-close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mt-2 text-center">
+                            <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="loop"
+                                colors="primary:#f7b84b,secondary:#f06548" style="width:100px;height:100px"></lord-icon>
+                            <div class="mt-4 pt-2 fs-15 mx-4 mx-sm-5">
+                                <h4>Are you sure ?</h4>
+                                <p class="text-muted mx-4 mb-0">Are you sure you want to remove this Notification ?</p>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
+                            <button type="button" class="btn w-sm btn-light" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn w-sm btn-danger" id="delete-notification">Yes, Delete
+                                It!</button>
+                        </div>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+        <!-- ========== App Menu ========== -->
+        <div class="app-menu navbar-menu">
+            <!-- LOGO -->
+            <div class="navbar-brand-box">
+                <!-- Dark Logo-->
+                <a href="index.html" class="logo logo-dark">
+                    <span class="logo-sm">
+                        <img src="assets/images/fav.svg" class="menuFav" alt="">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="assets/images/logo-dark.png" class="menuLogo" alt="">
+                    </span>
+                </a>
+                <!-- Light Logo-->
+                <a href="index.html" class="logo logo-light">
+                    <span class="logo-sm">
+                        <img src="assets/images/fav2.svg" class="menuFav" alt="">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="assets/images/logo-light.png" class="menuLogo" alt="">
+                    </span>
+                </a>
+                <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
+                    id="vertical-hover">
+                    <i class="ri-record-circle-line"></i>
+                </button>
+            </div>
+            <div id="scrollbar">
+                <div class="container-fluid">
+                    <div id="two-column-menu">
+                    </div>
+                    <ul class="navbar-nav" id="navbar-nav">
+                        <li class="menu-title"><span>Menu</span></li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="index.html">
+                                <i class="ri-wallet-line"></i> <span>Payments</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="jobs.html">
+                                <i class="ri-briefcase-line"></i> <span>Jobs</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="contractors.html">
+                                <i class="ri-shuffle-line"></i> <span>Contractors</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="clients.html">
+                                <i class="ri-group-line"></i> <span>Clients</span>
+                            </a>
+                        </li>
+                        <li class="menu-title"><span>Settings</span></li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="companies.html">
+                                <i class="ri-profile-line"></i> <span>Companies</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="users.html">
+                                <i class="ri-group-line"></i> <span>Users</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="roles.html">
+                                <i class="ri-settings-5-line"></i> <span>Roles</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="branding.html">
+                                <i class="ri-shape-fill"></i> <span>Branding</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Sidebar -->
+            </div>
+            <div class="sidebar-background"></div>
+        </div>
+        <!-- Left Sidebar End -->
+        <!-- Vertical Overlay-->
+        <div class="vertical-overlay"></div>
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+            <div class="page-content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-2 col-12 p-2 d-flex align-items-center">
+                            <h2 class="m-0">Job</h2>
+                        </div>
+                        <div class="col-lg-10 col-12 p-2 d-flex gap-3">
+                            <button class="btn btn-success waves-effect waves-light w-100" data-bs-target="#addNote"
+                                data-bs-toggle="modal">
+                                <i class="ri-survey-line"></i> Add Note
+                            </button>
+                            <button class="btn btn-success waves-effect waves-light w-100" data-bs-target="#addInvoice"
+                                data-bs-toggle="modal">
+                                <i class="ri-clipboard-fill"></i> Add Invoice
+                            </button>
+                            <button class="btn btn-success waves-effect waves-light w-100"
+                                data-bs-target="#addAttachment" data-bs-toggle="modal">
+                                <i class="ri-attachment-2"></i> Add Attachment
+                            </button>
+                            <button class="btn btn-success waves-effect waves-light w-100" data-bs-target="#addRfq"
+                                data-bs-toggle="modal">
+                                <i class="ri-mail-line"></i> Add RFQ
+                            </button>
+                            <button class="btn btn-success waves-effect waves-light w-100" data-bs-target="#addCategory"
+                                data-bs-toggle="modal">
+                                <i class="ri-add-circle-line"></i> Add Category
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 p-2">
+                            <div class="card p-4 mb-0">
+                                <div class="job_card card">
+                                    <div class="card-body d-flex gap-4 align-items-center">
+                                        <div class="pro_img">
+                                            <img src="assets/images/avatar.png" alt="">
+                                        </div>
+                                        <div class="title">
+                                            <h5>Project Name : </h5>
+                                            <p class="mb-4">TEAR DOWN</p>
+                                            <h5>Client Name :</h5>
+                                            <p class="mb-0">HOUSIG DR FA</p>
+                                        </div>
+                                        <div class="list">
+                                            <img src="assets/images/clipboard.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <h6>Job Progress</h6>
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="progress w-100">
+                                        <div class="progress-bar" role="progressbar" style="width: 25%"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span>
+                                        25%
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 p-2">
+                            <div class="card m-0">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="pt-2">
+                                            <p class="fw-medium text-muted mb-0">Total Price</p>
+                                            <h2 class="mt-4 ff-secondary fw-semibold">
+                                                <span class="counter-value" data-target="50.66">0</span>k
+                                            </h2>
+                                            <p class="mb-0 text-muted">
+                                                <span class="badge bg-light text-danger mb-0"> <i
+                                                        class="ri-arrow-down-line align-middle"></i> 3.96 %
+                                                </span>
+                                                vs. previous month
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <div class="avatar-sm flex-shrink-0">
+                                                <span class="avatar-title bg-info-subtle rounded-circle fs-2"
+                                                    role="button" data-bs-toggle="modal" data-bs-target="#addEstimate"
+                                                    onclick="event.preventDefault()">
+                                                    <i data-feather="plus" class="text-info"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 p-2">
+                            <a href="totalPayments.html" class="card m-0">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="pt-2">
+                                            <p class="fw-medium text-muted mb-0">Total Cash In</p>
+                                            <h2 class="mt-4 ff-secondary fw-semibold">
+                                                <span class="counter-value" data-target="97.66">0</span>k
+                                            </h2>
+                                            <p class="mb-0 text-muted">
+                                                <span class="badge bg-light text-danger mb-0"> <i
+                                                        class="ri-arrow-down-line align-middle"></i> 3.96 %
+                                                </span>
+                                                vs. previous month
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <div class="avatar-sm flex-shrink-0">
+                                                <span class="avatar-title bg-info-subtle rounded-circle fs-2"
+                                                    role="button" data-bs-toggle="modal" data-bs-target="#addCashIn"
+                                                    onclick="event.preventDefault()">
+                                                    <i data-feather="plus" class="text-info"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 p-2">
+                            <a href="totalExpenses.html" class="card m-0">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="pt-2">
+                                            <p class="fw-medium text-muted mb-0">Total Cash Out</p>
+                                            <h2 class="mt-4 ff-secondary fw-semibold">
+                                                <span class="counter-value" data-target="35">0</span>k
+                                            </h2>
+                                            <p class="mb-0 text-muted">
+                                                <span class="badge bg-light text-danger mb-0"> <i
+                                                        class="ri-arrow-down-line align-middle"></i> 3.96 %
+                                                </span>
+                                                vs. previous month
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <div class="avatar-sm flex-shrink-0">
+                                                <span class="avatar-title bg-info-subtle rounded-circle fs-2"
+                                                    role="button" data-bs-toggle="modal" data-bs-target="#addCashOut"
+                                                    onclick="event.preventDefault()">
+                                                    <i data-feather="plus" class="text-info"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 p-2">
+                            <a href="totalGlobalExpenses.html" class="card m-0">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="pt-2">
+                                            <p class="fw-medium text-muted mb-0">Total Expenses</p>
+                                            <h2 class="mt-4 ff-secondary fw-semibold">
+                                                <span class="counter-value" data-target="86">0</span>k
+                                            </h2>
+                                            <p class="mb-0 text-muted">
+                                                <span class="badge bg-light text-danger mb-0"> <i
+                                                        class="ri-arrow-down-line align-middle"></i> 3.96 %
+                                                </span>
+                                                vs. previous month
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <div class="avatar-sm flex-shrink-0">
+                                                <span class="avatar-title bg-info-subtle rounded-circle fs-2"
+                                                    role="button" data-bs-toggle="modal" data-bs-target="#addExpense"
+                                                    onclick="event.preventDefault()">
+                                                    <i data-feather="plus" class="text-info"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 p-2">
+                            <div class="card p-3 mb-0">
+                                <div class="nav nav-pills text-center flex-nowrap" id="v-pills-tab" role="tablist">
+                                    <!-- tab btn -->
+                                    <a class="nav-link mb-0 w-100 active" id="v-pills-estimate-tab"
+                                        data-bs-toggle="pill" href="#v-pills-estimate" role="tab"
+                                        aria-controls="v-pills-estimate" aria-selected="true">
+                                        Estimate
+                                    </a>
+                                    <!-- tab btn -->
+                                    <a class="nav-link mb-0 w-100" id="v-pills-rfq-tab" data-bs-toggle="pill"
+                                        href="#v-pills-rfq" role="tab" aria-controls="v-pills-rfq"
+                                        aria-selected="false">
+                                        RFQ
+                                    </a>
+                                    <!-- tab btn -->
+                                    <a class="nav-link mb-0 w-100" id="v-pills-cashExpenses-tab" data-bs-toggle="pill"
+                                        href="#v-pills-cashExpenses" role="tab" aria-controls="v-pills-cashExpenses"
+                                        aria-selected="false">
+                                        Cash / Expenses
+                                    </a>
+                                    <!-- tab btn -->
+                                    <a class="nav-link mb-0 w-100" id="v-pills-invoicesEstimates-tab"
+                                        data-bs-toggle="pill" href="#v-pills-invoicesEstimates" role="tab"
+                                        aria-controls="v-pills-invoicesEstimates" aria-selected="false">
+                                        Invoices / Estimates
+                                    </a>
+                                    <!-- tab btn -->
+                                    <a class="nav-link mb-0 w-100" id="v-pills-notes-tab" data-bs-toggle="pill"
+                                        href="#v-pills-notes" role="tab" aria-controls="v-pills-notes"
+                                        aria-selected="false">
+                                        Notes
+                                    </a>
+                                    <!-- tab btn -->
+                                    <a class="nav-link mb-0 w-100" id="v-pills-attachments-tab" data-bs-toggle="pill"
+                                        href="#v-pills-attachments" role="tab" aria-controls="v-pills-attachments"
+                                        aria-selected="false">
+                                        Attachments
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 p-2">
+                            <div class="card p-4">
+                                <div class="tab-content text-muted mt-4 mt-md-0 h-100" id="v-pills-tabContent">
+                                    <div class="tab-pane fade show active h-100" id="v-pills-estimate" role="tabpanel"
+                                        aria-labelledby="v-pills-estimate-tab">
+
+                                    </div>
+                                    <div class="tab-pane fade  h-100" id="v-pills-rfq" role="tabpanel"
+                                        aria-labelledby="v-pills-rfq-tab">
+                                        <table id="example"
+                                            class="table table-bordered dt-responsive nowrap table-striped align-middle"
+                                            style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" style="width: 10px;">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input fs-15" type="checkbox"
+                                                                id="checkAll" value="option">
+                                                        </div>
+                                                    </th>
+                                                    <th data-ordering="false">RFQ Number </th>
+                                                    <th data-ordering="false">RFQ Date </th>
+                                                    <th data-ordering="false">Vendor </th>
+                                                    <th data-ordering="false">Category </th>
+                                                    <th data-ordering="false">Category Rows </th>
+                                                    <th data-ordering="false">Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input fs-15" type="checkbox"
+                                                                name="checkAll" value="option1">
+                                                        </div>
+                                                    </th>
+                                                    <td>1234</td>
+                                                    <td>09/02/2024</td>
+                                                    <td>Mark</td>
+                                                    <td>c1</td>
+                                                    <td>Row1</td>
+                                                    <td>
+                                                        <button class="btnn bttn-success" data-bs-toggle="modal"
+                                                            data-bs-target="#addRfq">
+                                                            <i class="ri-eye-fill fs-16"></i>
+                                                        </button>
+                                                        <button class="btnn bttn-dark" data-bs-toggle="modal"
+                                                            data-bs-target="#addRfq>
+                                                            <i class=" ri-pencil-fill fs-16"></i>
+                                                        </button>
+                                                        <button class="btnn bttn-danger">
+                                                            <i class="ri-delete-bin-fill fs-16"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input fs-15" type="checkbox"
+                                                                name="checkAll" value="option1">
+                                                        </div>
+                                                    </th>
+                                                    <td>1234</td>
+                                                    <td>09/02/2024</td>
+                                                    <td>Mark</td>
+                                                    <td>c1</td>
+                                                    <td>Row1</td>
+                                                    <td>
+                                                        <button class="btnn bttn-success" data-bs-toggle="modal"
+                                                            data-bs-target="#addRfq">
+                                                            <i class="ri-eye-fill fs-16"></i>
+                                                        </button>
+                                                        <button class="btnn bttn-dark" data-bs-toggle="modal"
+                                                            data-bs-target="#addRfq>
+                                                            <i class=" ri-pencil-fill fs-16"></i>
+                                                        </button>
+                                                        <button class="btnn bttn-danger">
+                                                            <i class="ri-delete-bin-fill fs-16"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input fs-15" type="checkbox"
+                                                                name="checkAll" value="option1">
+                                                        </div>
+                                                    </th>
+                                                    <td>1234</td>
+                                                    <td>09/02/2024</td>
+                                                    <td>Mark</td>
+                                                    <td>c1</td>
+                                                    <td>Row1</td>
+                                                    <td>
+                                                        <button class="btnn bttn-success" data-bs-toggle="modal"
+                                                            data-bs-target="#addRfq">
+                                                            <i class="ri-eye-fill fs-16"></i>
+                                                        </button>
+                                                        <button class="btnn bttn-dark" data-bs-toggle="modal"
+                                                            data-bs-target="#addRfq>
+                                                            <i class=" ri-pencil-fill fs-16"></i>
+                                                        </button>
+                                                        <button class="btnn bttn-danger">
+                                                            <i class="ri-delete-bin-fill fs-16"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="tab-pane fade  h-100" id="v-pills-cashExpenses" role="tabpanel"
+                                        aria-labelledby="v-pills-cashExpenses-tab">
+                                        <table id="example"
+                                            class="table table-bordered dt-responsive nowrap table-striped align-middle"
+                                            style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" style="width: 10px;">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input fs-15" type="checkbox"
+                                                                id="checkAll" value="option">
+                                                        </div>
+                                                    </th>
+                                                    <th data-ordering="false">Transaction Number </th>
+                                                    <th data-ordering="false">Transaction Date </th>
+                                                    <th data-ordering="false">Transaction Amount </th>
+                                                    <th data-ordering="false">Type </th>
+                                                    <th data-ordering="false">Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input fs-15" type="checkbox"
+                                                                name="checkAll" value="option1">
+                                                        </div>
+                                                    </th>
+                                                    <td>1234</td>
+                                                    <td>09/02/2024</td>
+                                                    <td>$7800</td>
+                                                    <td>
+                                                        <span class="badge bg-danger">
+                                                            Expense
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <button class="btnn bttn-success" data-bs-toggle="modal"
+                                                            data-bs-target="#addExpense">
+                                                            <i class="ri-eye-fill fs-16"></i>
+                                                        </button>
+                                                        <button class="btnn bttn-dark" data-bs-toggle="modal"
+                                                            data-bs-target="#addExpense">
+                                                            <i class="ri-pencil-fill fs-16"></i>
+                                                        </button>
+                                                        <button class="btnn bttn-danger">
+                                                            <i class="ri-delete-bin-fill fs-16"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input fs-15" type="checkbox"
+                                                                name="checkAll" value="option1">
+                                                        </div>
+                                                    </th>
+                                                    <td>554</td>
+                                                    <td>09/02/2024</td>
+                                                    <td>$5545</td>
+                                                    <td>
+                                                        <span class="badge bg-success">
+                                                            Cash in
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <button class="btnn bttn-success" data-bs-toggle="modal"
+                                                            data-bs-target="#addCashIn">
+                                                            <i class="ri-eye-fill fs-16"></i>
+                                                        </button>
+                                                        <button class="btnn bttn-dark" data-bs-toggle="modal"
+                                                            data-bs-target="#addCashIn">
+                                                            <i class=" ri-pencil-fill fs-16"></i>
+                                                        </button>
+                                                        <button class="btnn bttn-danger">
+                                                            <i class="ri-delete-bin-fill fs-16"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input fs-15" type="checkbox"
+                                                                name="checkAll" value="option1">
+                                                        </div>
+                                                    </th>
+                                                    <td>554</td>
+                                                    <td>09/02/2024</td>
+                                                    <td>$5545</td>
+                                                    <td>
+                                                        <span class="badge bg-warning">
+                                                            Cash out
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <button class="btnn bttn-success" data-bs-toggle="modal"
+                                                            data-bs-target="#addCashOut">
+                                                            <i class="ri-eye-fill fs-16"></i>
+                                                        </button>
+                                                        <button class="btnn bttn-dark" data-bs-toggle="modal"
+                                                            data-bs-target="#addCashOut">
+                                                            <i class=" ri-pencil-fill fs-16"></i>
+                                                        </button>
+                                                        <button class="btnn bttn-danger">
+                                                            <i class="ri-delete-bin-fill fs-16"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="tab-pane fade h-100" id="v-pills-invoicesEstimates" role="tabpanel"
+                                        aria-labelledby="v-pills-invoicesEstimates-tab">
+                                        <table id="example"
+                                            class="table table-bordered dt-responsive nowrap table-striped align-middle"
+                                            style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" style="width: 10px;">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input fs-15" type="checkbox"
+                                                                id="checkAll" value="option">
+                                                        </div>
+                                                    </th>
+                                                    <th data-ordering="false">Invoice/Estimate Number </th>
+                                                    <th data-ordering="false">Invoice/Estimate Date </th>
+                                                    <th data-ordering="false">Invoice/Estimate Amount </th>
+                                                    <th data-ordering="false">Type </th>
+                                                    <th data-ordering="false">Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input fs-15" type="checkbox"
+                                                                name="checkAll" value="option1">
+                                                        </div>
+                                                    </th>
+                                                    <td>1234</td>
+                                                    <td>09/02/2024</td>
+                                                    <td>$7800</td>
+                                                    <td>
+                                                        <span class="badge bg-warning">
+                                                            Estimate
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <button class="btnn bttn-success" data-bs-toggle="modal"
+                                                            data-bs-target="#addInvoice">
+                                                            <i class="ri-eye-fill fs-16"></i>
+                                                        </button>
+                                                        <button class="btnn bttn-dark" data-bs-toggle="modal"
+                                                            data-bs-target="#addInvoice">
+                                                            <i class="ri-pencil-fill fs-16"></i>
+                                                        </button>
+                                                        <button class="btnn bttn-danger">
+                                                            <i class="ri-delete-bin-fill fs-16"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input fs-15" type="checkbox"
+                                                                name="checkAll" value="option1">
+                                                        </div>
+                                                    </th>
+                                                    <td>554</td>
+                                                    <td>09/02/2024</td>
+                                                    <td>$5545</td>
+                                                    <td>
+                                                        <span class="badge bg-secondary">
+                                                            Inovice
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <button class="btnn bttn-success" data-bs-toggle="modal"
+                                                            data-bs-target="#addInvoice">
+                                                            <i class="ri-eye-fill fs-16"></i>
+                                                        </button>
+                                                        <button class="btnn bttn-dark" data-bs-toggle="modal"
+                                                            data-bs-target="#addInvoice">
+                                                            <i class="ri-pencil-fill fs-16"></i>
+                                                        </button>
+                                                        <button class="btnn bttn-danger">
+                                                            <i class="ri-delete-bin-fill fs-16"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="tab-pane fade h-100" id="v-pills-notes" role="tabpanel"
+                                        aria-labelledby="v-pills-notes-tab">
+                                        <table id="example"
+                                            class="table table-bordered dt-responsive nowrap table-striped align-middle"
+                                            style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" style="width: 10px;">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input fs-15" type="checkbox"
+                                                                id="checkAll" value="option">
+                                                        </div>
+                                                    </th>
+                                                    <th data-ordering="false">Note</th>
+                                                    <th data-ordering="false">Note Date</th>
+                                                    <th data-ordering="false">Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input fs-15" type="checkbox"
+                                                                name="checkAll" value="option1">
+                                                        </div>
+                                                    </th>
+                                                    <td>"build your own pc"</td>
+                                                    <td>09/02/2024</td>
+                                                    <td>
+                                                        <button class="btnn bttn-success" data-bs-toggle="modal"
+                                                            data-bs-target="#addNote">
+                                                            <i class="ri-eye-fill fs-16"></i>
+                                                        </button>
+                                                        <button class="btnn bttn-dark" data-bs-toggle="modal"
+                                                            data-bs-target="#addNote">
+                                                            <i class="ri-pencil-fill fs-16"></i>
+                                                        </button>
+                                                        <button class="btnn bttn-danger">
+                                                            <i class="ri-delete-bin-fill fs-16"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input fs-15" type="checkbox"
+                                                                name="checkAll" value="option1">
+                                                        </div>
+                                                    </th>
+                                                    <td>"build your own pc"</td>
+                                                    <td>09/02/2024</td>
+                                                    <td>
+                                                        <button class="btnn bttn-success" data-bs-toggle="modal"
+                                                            data-bs-target="#addNote">
+                                                            <i class="ri-eye-fill fs-16"></i>
+                                                        </button>
+                                                        <button class="btnn bttn-dark" data-bs-toggle="modal"
+                                                            data-bs-target="#addNote">
+                                                            <i class="ri-pencil-fill fs-16"></i>
+                                                        </button>
+                                                        <button class="btnn bttn-danger">
+                                                            <i class="ri-delete-bin-fill fs-16"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="tab-pane fade h-100" id="v-pills-attachments" role="tabpanel"
+                                        aria-labelledby="v-pills-attachments-tab">
+                                        <table id="example"
+                                            class="table table-bordered dt-responsive nowrap table-striped align-middle"
+                                            style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" style="width: 10px;">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input fs-15" type="checkbox"
+                                                                id="checkAll" value="option">
+                                                        </div>
+                                                    </th>
+                                                    <th data-ordering="false">File Name</th>
+                                                    <th data-ordering="false">Created By</th>
+                                                    <th data-ordering="false">Expiration Date</th>
+                                                    <th data-ordering="false">Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input fs-15" type="checkbox"
+                                                                name="checkAll" value="option1">
+                                                        </div>
+                                                    </th>
+                                                    <td>CV</td>
+                                                    <td>Admin</td>
+                                                    <td>
+                                                        <span class="expire-code success">
+                                                            01/02/2024
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <button class="btnn bttn-success" data-bs-toggle="modal"
+                                                            data-bs-target="#addAttachment">
+                                                            <i class="ri-eye-fill fs-16"></i>
+                                                        </button>
+                                                        <button class="btnn bttn-dark" data-bs-toggle="modal"
+                                                            data-bs-target="#addAttachment">
+                                                            <i class="ri-pencil-fill fs-16"></i>
+                                                        </button>
+                                                        <button class="btnn bttn-danger">
+                                                            <i class="ri-delete-bin-fill fs-16"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input fs-15" type="checkbox"
+                                                                name="checkAll" value="option1">
+                                                        </div>
+                                                    </th>
+                                                    <td>CV</td>
+                                                    <td>Admin</td>
+                                                    <td>
+                                                        <span class="expire-code warning">
+                                                            01/02/2024
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <button class="btnn bttn-success" data-bs-toggle="modal"
+                                                            data-bs-target="#addAttachment">
+                                                            <i class="ri-eye-fill fs-16"></i>
+                                                        </button>
+                                                        <button class="btnn bttn-dark" data-bs-toggle="modal"
+                                                            data-bs-target="#addAttachment">
+                                                            <i class="ri-pencil-fill fs-16"></i>
+                                                        </button>
+                                                        <button class="btnn bttn-danger">
+                                                            <i class="ri-delete-bin-fill fs-16"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input fs-15" type="checkbox"
+                                                                name="checkAll" value="option1">
+                                                        </div>
+                                                    </th>
+                                                    <td>CV</td>
+                                                    <td>Admin</td>
+                                                    <td>
+                                                        <span class="expire-code danger">
+                                                            01/02/2024
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <button class="btnn bttn-success" data-bs-toggle="modal"
+                                                            data-bs-target="#addAttachment">
+                                                            <i class="ri-eye-fill fs-16"></i>
+                                                        </button>
+                                                        <button class="btnn bttn-dark" data-bs-toggle="modal"
+                                                            data-bs-target="#addAttachment">
+                                                            <i class="ri-pencil-fill fs-16"></i>
+                                                        </button>
+                                                        <button class="btnn bttn-danger">
+                                                            <i class="ri-delete-bin-fill fs-16"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="addNote" class="modal fade zoomIn" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="mb-0"><i class="ri-survey-line"></i> Add Note</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                    id="NotificationModalbtn-close">
+                                </button>
+                            </div>
+                            <div class="modal-body container">
+                                <form action="" class="row">
+                                    <div class="col-12 p-2">
+                                        <label for="note" class="form-label">Note</label>
+                                        <textarea name="note" id="note" class="form-control"></textarea>
+                                    </div>
+                                    <div class="col-12 p-2">
+                                        <label for="Attachments" class="form-label">Attachments</label>
+                                        <input type="file" name="Attachments" id="Attachments"
+                                            class="filepond-multiple ">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer d-block">
+                                <div class="containter">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <button
+                                                class="w-100 border btn btn-tranparent fs-7 fw-medium text-body-tertiary"
+                                                type="reset" data-bs-dismiss="modal" aria-label="Close">
+                                                Cancel
+                                            </button>
+                                        </div>
+                                        <div class="col-6">
+                                            <button class="w-100 btn btn-success fs-7 fw-medium" type="submit">
+                                                Submit
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="addInvoice" class="modal fade zoomIn" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="mb-0"><i class="ri-clipboard-fill"></i> Add Invoice</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                    id="NotificationModalbtn-close">
+                                </button>
+                            </div>
+                            <div class="modal-body container">
+                                <form action="" class="row">
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <div>
+                                            <label for="inoviceDate" class="form-label">Invoice Date</label>
+                                            <input type="date" class="form-control" id="inoviceDate">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <div>
+                                            <label for="amount" class="form-label">Amount</label>
+                                            <input type="text" class="form-control" id="amount"
+                                                placeholder="Enter Inovice Amount">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 p-2">
+                                        <div>
+                                            <label for="inoviceNum" class="form-label">Invoice Number</label>
+                                            <input type="text" class="form-control" id="inoviceNum"
+                                                placeholder="Enter Inovice Number">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 p-2">
+                                        <label for="Comments" class="form-label">Comments</label>
+                                        <textarea name="Comments" id="Comments" class="form-control"></textarea>
+                                    </div>
+                                    <div class="col-12 p-2">
+                                        <label for="Attachments" class="form-label">Attachments</label>
+                                        <input type="file" name="Attachments" id="Attachments"
+                                            class="filepond-multiple ">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer d-block">
+                                <div class="containter">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <button
+                                                class="w-100 border btn btn-tranparent fs-7 fw-medium text-body-tertiary"
+                                                type="reset" data-bs-dismiss="modal" aria-label="Close">
+                                                Cancel
+                                            </button>
+                                        </div>
+                                        <div class="col-6">
+                                            <button class="w-100 btn btn-success fs-7 fw-medium" type="submit">
+                                                Submit
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="addAttachment" class="modal fade zoomIn" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="mb-0"><i class="ri-attachment-2"></i> Add Attachment</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                    id="NotificationModalbtn-close">
+                                </button>
+                            </div>
+                            <div class="modal-body container">
+                                <form action="" class="row">
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <label for="attachmentName" class="form-label">Attachment Name</label>
+                                        <input type="text" class="form-control" id="attachmentName"
+                                            placeholder="Ex : company logo">
+                                    </div>
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <label for="expireDate" class="form-label">Expiration
+                                            Date</label>
+                                        <input type="date" class="form-control" id="expireDate">
+                                    </div>
+                                    <div class="col-12 p-2">
+                                        <label for="formFileMultiple" class="form-label">Attachment</label>
+                                        <input type="file" name="" id="" class="filepond ">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer d-block">
+                                <div class="containter">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <button
+                                                class="w-100 border btn btn-tranparent fs-7 fw-medium text-body-tertiary"
+                                                type="reset" data-bs-dismiss="modal" aria-label="Close">
+                                                Cancel
+                                            </button>
+                                        </div>
+                                        <div class="col-6">
+                                            <button class="w-100 btn btn-success fs-7 fw-medium" type="submit">
+                                                Submit
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="addRfq" class="modal fade zoomIn" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="mb-0"><i class="ri-mail-line"></i> Add RFQ</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                    id="NotificationModalbtn-close">
+                                </button>
+                            </div>
+                            <div class="modal-body container">
+                                <form action="" class="row">
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <label for="vendor" class="form-label">Vendor</label>
+                                        <select class="form-select mb-3" aria-label="Default select example">
+                                            <option value="">Please Choose</option>
+                                            <option value="1">Mark K</option>
+                                            <option value="2">Roben W</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <label for="Category" class="form-label">Category</label>
+                                        <select class="form-select mb-3" aria-label="Default select example">
+                                            <option value="">Please Choose</option>
+                                            <option value="17">Framing Alteration</option>
+                                            <option value="18">Excavation Utilities Installation</option>
+                                            <option value="19">Masonry Paving</option>
+                                            <option value="20">Extirior</option>
+                                            <option value="21">Plumbing</option>
+                                            <option value="22">Electrical</option>
+                                            <option value="23">Insulation</option>
+                                            <option value="24">Plaster Drywalls</option>
+                                            <option value="25">Floors Tiles</option>
+                                            <option value="26">Interior Finish Carpentry</option>
+                                            <option value="27">Interior Painting</option>
+                                            <option value="28">Landscaping</option>
+                                            <option value="29">Cleanup</option>
+                                            <option value="30">Miscellaneous</option>
+                                            <option value="31">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <label for="rfqNumber" class="form-label">RFQ Number</label>
+                                        <input type="text" class="form-control" id="rfqNumber">
+                                    </div>
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <label for="Row" class="form-label">Row</label>
+                                        <select class="js-example-basic-multiple form-select" name="states[]"
+                                            multiple="multiple">
+                                            <option value="Row1">Row1</option>
+                                            <option value="Row2">Row2</option>
+                                            <option value="Row3">Row3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 p-2">
+                                        <label for="Attachments" class="form-label">Attachments</label>
+                                        <input type="file" name="Attachments" id="Attachments"
+                                            class="filepond-multiple ">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer d-block">
+                                <div class="containter">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <button
+                                                class="w-100 border btn btn-tranparent fs-7 fw-medium text-body-tertiary"
+                                                type="reset" data-bs-dismiss="modal" aria-label="Close">
+                                                Cancel
+                                            </button>
+                                        </div>
+                                        <div class="col-6">
+                                            <button class="w-100 btn btn-success fs-7 fw-medium" type="submit">
+                                                Submit
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="addCategory" class="modal fade zoomIn" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="mb-0"><i class="ri-clipboard-fill"></i> Add Category</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                    id="NotificationModalbtn-close">
+                                </button>
+                            </div>
+                            <div class="modal-body container">
+                                <form action="" class="row">
+                                    <div class="col-12 p-2">
+                                        <label for="name" class="form-label">Category Name</label>
+                                        <input type="text" class="form-control" id="name">
+                                    </div>
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <label for="startDate" class="form-label">Start Date</label>
+                                        <input type="date" class="form-control" id="startDate">
+                                    </div>
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <label for="endDate" class="form-label">End Date</label>
+                                        <input type="date" class="form-control" id="startDate">
+                                    </div>
+                                    <div class="col-12 p-2">
+                                        <label for="Attachments" class="form-label">Attachments</label>
+                                        <input type="file" name="Attachments" id="Attachments"
+                                            class="filepond-multiple ">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer d-block">
+                                <div class="containter">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <button
+                                                class="w-100 border btn btn-tranparent fs-7 fw-medium text-body-tertiary"
+                                                type="reset" data-bs-dismiss="modal" aria-label="Close">
+                                                Cancel
+                                            </button>
+                                        </div>
+                                        <div class="col-6">
+                                            <button class="w-100 btn btn-success fs-7 fw-medium" type="submit">
+                                                Submit
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="addExpense" class="modal fade zoomIn" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="mb-0">Add New Expense</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                    id="NotificationModalbtn-close">
+                                </button>
+                            </div>
+                            <div class="modal-body container">
+                                <form action="" class="row">
+                                    <div class="col-12 p-2">
+                                        <label class="form-label">Company</label>
+                                        <select class="js-example-basic-multiple form-select" name="states[]"
+                                            multiple="multiple">
+                                            <optgroup label="UK">
+                                                <option value="London">London</option>
+                                                <option value="Manchester">Manchester</option>
+                                                <option value="Liverpool">Liverpool</option>
+                                            </optgroup>
+                                            <optgroup label="FR">
+                                                <option value="Paris">Paris</option>
+                                                <option value="Lyon">Lyon</option>
+                                                <option value="Marseille">Marseille</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <div>
+                                            <label for="expense" class="form-label">Expense Type</label>
+                                            <select class="form-select mb-3" aria-label="Default select example">
+                                                <option selected="">Select Type </option>
+                                                <option value="1">insurance</option>
+                                                <option value="2">testing</option>
+                                                <option value="3">security</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <div>
+                                            <label for="amount" class="form-label">Amount</label>
+                                            <input type="text" class="form-control" id="amount" placeholder="$00,00">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <div>
+                                            <label for="payType" class="form-label">Payment Type</label>
+                                            <select class="form-select mb-3" aria-label="Default select example">
+                                                <option selected="">Select Type </option>
+                                                <option value="1">Cash</option>
+                                                <option value="2">Bank transfer</option>
+                                                <option value="3">Bank check</option>
+                                                <option value="4">Credit card</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <div>
+                                            <label for="payDate" class="form-label">Payment Date</label>
+                                            <input type="date" class="form-control" id="payDate">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 p-2">
+                                        <div>
+                                            <label for="comment" class="form-label">Comment</label>
+                                            <textarea name="comment" id="comment" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 p-2">
+                                        <div>
+                                            <label for="formFileMultiple" class="form-label">Attachments</label>
+                                            <input type="file" name="Attachments" id="Attachments"
+                                                class="filepond-multiple ">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer d-block">
+                                <div class="containter">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <button
+                                                class="w-100 border btn btn-tranparent fs-7 fw-medium text-body-tertiary"
+                                                type="reset" data-bs-dismiss="modal" aria-label="Close">
+                                                Cancel
+                                            </button>
+                                        </div>
+                                        <div class="col-6">
+                                            <button class="w-100 btn btn-success fs-7 fw-medium" type="submit">
+                                                Submit
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="addCashOut" class="modal fade zoomIn" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="mb-0">Add Cash Out</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                    id="NotificationModalbtn-close">
+                                </button>
+                            </div>
+                            <div class="modal-body container">
+                                <form action="" class="row">
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <label for="vendor" class="form-label">Vendor</label>
+                                        <select class="form-select mb-3" aria-label="Default select example">
+                                            <option value="">Please Choose</option>
+                                            <option value="1">Mark K</option>
+                                            <option value="2">Roben W</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <label for="Category" class="form-label">Category</label>
+                                        <select class="form-select mb-3" aria-label="Default select example">
+                                            <option value="">Please Choose</option>
+                                            <option value="17">Framing Alteration</option>
+                                            <option value="18">Excavation Utilities Installation</option>
+                                            <option value="19">Masonry Paving</option>
+                                            <option value="20">Extirior</option>
+                                            <option value="21">Plumbing</option>
+                                            <option value="22">Electrical</option>
+                                            <option value="23">Insulation</option>
+                                            <option value="24">Plaster Drywalls</option>
+                                            <option value="25">Floors Tiles</option>
+                                            <option value="26">Interior Finish Carpentry</option>
+                                            <option value="27">Interior Painting</option>
+                                            <option value="28">Landscaping</option>
+                                            <option value="29">Cleanup</option>
+                                            <option value="30">Miscellaneous</option>
+                                            <option value="31">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <label for="Row" class="form-label">Row</label>
+                                        <select class="js-example-basic-multiple form-select" name="states[]"
+                                            multiple="multiple">
+                                            <option value="Row1">Row1</option>
+                                            <option value="Row2">Row2</option>
+                                            <option value="Row3">Row3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <label for="type" class="form-label">Type</label>
+                                        <select class="form-select mb-3" aria-label="Default select example">
+                                            <option value="">Please Choose</option>
+                                            <option value="labor">Labor
+                                            </option>
+                                            <option value="rough_material">Rough Material
+                                            </option>
+                                            <option value="finish_material_allowances">Finish Material Allowances
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <label for="rfqNumber" class="form-label">RFQ Number</label>
+                                        <input type="text" class="form-control" id="rfqNumber">
+                                    </div>
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <label for="amount" class="form-label">Amount</label>
+                                        <input type="text" class="form-control" id="amount">
+                                    </div>
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <label for="amount" class="form-label">Payment type</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option value="">Please Choose</option>
+                                            <option value="cash">Cash</option>
+                                            <option value="bank_transfer">Bank Transfer</option>
+                                            <option value="bank_check">Bank Check</option>
+                                            <option value="credit_card">Credit Card</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <label for="bankCheck" class="form-label">Bank check number</label>
+                                        <input type="text" class="form-control" id="bankCheck">
+                                    </div>
+                                    <div class="col-12 p-2">
+                                        <label for="payDate" class="form-label">Payment Date</label>
+                                        <input type="date" class="form-control" id="payDate">
+                                    </div>
+                                    <div class="col-12 p-2">
+                                        <label for="Comment" class="form-label">Comment</label>
+                                        <textarea name="Comment" id="Comments" class="form-control"></textarea>
+                                    </div>
+                                    <div class="col-12 p-2">
+                                        <label for="Attachments" class="form-label">Attachments</label>
+                                        <input type="file" name="Attachments" id="Attachments"
+                                            class="filepond-multiple ">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer d-block">
+                                <div class="containter">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <button
+                                                class="w-100 border btn btn-tranparent fs-7 fw-medium text-body-tertiary"
+                                                type="reset" data-bs-dismiss="modal" aria-label="Close">
+                                                Cancel
+                                            </button>
+                                        </div>
+                                        <div class="col-6">
+                                            <button class="w-100 btn btn-success fs-7 fw-medium" type="submit">
+                                                Submit
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="addCashIn" class="modal fade zoomIn" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="mb-0">Add Cash in</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                    id="NotificationModalbtn-close">
+                                </button>
+                            </div>
+                            <div class="modal-body container">
+                                <form action="" class="row">
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <label for="inoviceNumber" class="form-label">Invoice Number</label>
+                                        <input type="text" class="form-control" id="inoviceNumber">
+                                    </div>
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <label for="amount" class="form-label">Amount</label>
+                                        <input type="text" class="form-control" id="amount">
+                                    </div>
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <label for="vendor" class="form-label">Vendor</label>
+                                        <select class="form-select mb-3" aria-label="Default select example">
+                                            <option value="">Please Choose</option>
+                                            <option value="1">Mark K</option>
+                                            <option value="2">Roben W</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <label for="payDate" class="form-label">Payment Date</label>
+                                        <input type="date" class="form-control" id="payDate">
+                                    </div>
+                                    <div class="col-12 p-2">
+                                        <label for="Comment" class="form-label">Comment</label>
+                                        <textarea name="Comment" id="Comments" class="form-control"></textarea>
+                                    </div>
+                                    <div class="col-12 p-2">
+                                        <label for="Attachments" class="form-label">Attachments</label>
+                                        <input type="file" name="Attachments" id="Attachments"
+                                            class="filepond-multiple ">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer d-block">
+                                <div class="containter">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <button
+                                                class="w-100 border btn btn-tranparent fs-7 fw-medium text-body-tertiary"
+                                                type="reset" data-bs-dismiss="modal" aria-label="Close">
+                                                Cancel
+                                            </button>
+                                        </div>
+                                        <div class="col-6">
+                                            <button class="w-100 btn btn-success fs-7 fw-medium" type="submit">
+                                                Submit
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="addEstimate" class="modal fade zoomIn" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="mb-0">Add Estimate</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                    id="NotificationModalbtn-close">
+                                </button>
+                            </div>
+                            <div class="modal-body container">
+                                <form action="" class="row">
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <label for="estimateDate" class="form-label">Estimate Date</label>
+                                        <input type="date" class="form-control" id="estimateDate">
+                                    </div>
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <label for="amount" class="form-label">Amount</label>
+                                        <input type="text" class="form-control" id="amount">
+                                    </div>
+                                    <div class="col-12 p-2">
+                                        <label for="estimateNo" class="form-label">Estimate Number</label>
+                                        <input type="text" class="form-control" id="estimateNo">
+                                    </div>
+                                    <div class="col-12 p-2">
+                                        <label for="Comment" class="form-label">Comment</label>
+                                        <textarea name="Comment" id="Comments" class="form-control"></textarea>
+                                    </div>
+                                    <div class="col-12 p-2">
+                                        <label for="Attachments" class="form-label">Attachments</label>
+                                        <input type="file" name="Attachments" id="Attachments"
+                                            class="filepond-multiple ">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer d-block">
+                                <div class="containter">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <button
+                                                class="w-100 border btn btn-tranparent fs-7 fw-medium text-body-tertiary"
+                                                type="reset" data-bs-dismiss="modal" aria-label="Close">
+                                                Cancel
+                                            </button>
+                                        </div>
+                                        <div class="col-6">
+                                            <button class="w-100 btn btn-success fs-7 fw-medium" type="submit">
+                                                Submit
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Page-content -->
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <script>document.write(new Date().getFullYear())</script> © <a
+                                href="https://epalsolutions.com" target="_blank">Epal Solutions</a>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="text-sm-end d-none d-sm-block">
+                                Design & Develop by <a href="https://epalsolutions.com" target="_blank">Epal
+                                    Solutions</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- end main content-->
+    </div>
+    <!--start back-to-top-->
+    <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+    <!--preloader-->
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner-border text-primary avatar-sm" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div>
+    <!-- +++++++++++++++++++++++++++++++++++++ -->
+    <!-- +++++++++++++++++++++++++++++++++++++ -->
+    <!-- +++++++++++++++ JAVASCRIPT ++++++++++ -->
+    <!-- +++++++++++++++++++++++++++++++++++++ -->
+    <!-- +++++++++++++++++++++++++++++++++++++ -->
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+    <script src="assets/libs/feather-icons/feather.min.js"></script>
+    <!-- apexcharts -->
+    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/directionChange.js"></script>
+    <!-- piecharts init -->
+    <script src="assets/js/pages/apexcharts-costom.js"></script>
+    <!--jquery cdn-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--select2 cdn-->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <!-- select 2 init -->
+    <script src="assets/js/pages/select2.init.js"></script>
+    <!--datatable js-->
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="assets/js/pages/datatables.init.js"></script>
+    <script src="assets/js/pages/datatables.init.js"></script>
+    <!-- file pond -->
+    <script src="assets/js/filepond.min.js"></script>
+    <script>
+        $(".filepond-multiple").filepond({
+            allowMultiple: true
+        });
+        $(".filepond").filepond();
+    </script>
+</body>
+
+</html>

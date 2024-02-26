@@ -124,4 +124,28 @@
 }
 #attachmentFormContainer .filepond--panel-root {
   background-color: var(--vz-input-bg-custom) !important;
+}
+
+.job_card {
+  background: var(--vz-body-bg) !important;
+}
+.job_card .pro_img {
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  overflow: hidden;
+  border: 1px solid #ced4da;
+}
+.job_card .pro_img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.list {
+  margin-left: auto;
+}
+.list img {
+  height: 100px;
 }/*# sourceMappingURL=custom.css.map */
