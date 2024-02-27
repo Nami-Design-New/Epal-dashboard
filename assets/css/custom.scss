@@ -134,9 +134,28 @@
     }
   }
 }
-.list{
+.list {
   margin-left: auto;
-  img{
+  img {
     height: 100px;
   }
+}
+.accordion-button::after {
+  display: none;
+}
+.category_button {
+  display: flex;
+  flex-direction: column;
+}
+.table tbody tr:last-child {
+  border-color: #fff;
+}
+.accordion-button:not(.collapsed) {
+  background-color: #fff;
+}
+.addrow {
+  white-space: nowrap;
+}
+.accordion-header {
+  border-bottom: 1px solid var(-vz-border-color);
 }
