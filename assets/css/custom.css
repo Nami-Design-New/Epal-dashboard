@@ -192,4 +192,8 @@
   margin: 0;
   cursor: pointer;
   flex: 1;
+}
+
+.dropdown-item {
+  text-transform: capitalize;
 }/*# sourceMappingURL=custom.css.map */
