@@ -27,6 +27,8 @@
     <link href="assets/css/app.min.css" id="appCss" rel="stylesheet" />
     <!-- custom Css-->
     <link rel="stylesheet" href="assets/css/custom.css">
+    <!-- filepond -->
+    <link rel="stylesheet" href="assets/css/filepond.min.css">
 </head>
 
 
@@ -511,25 +513,25 @@
                                     <div class="col-lg-6 col-12 p-2">
                                         <div>
                                             <label for="fav-white" class="form-label">Fav Icon (white)</label>
-                                            <input class="form-control" type="file" id="formFileMultiple" >
+                                            <input class="form-control" type="file" id="formFileMultiple">
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-12 p-2">
                                         <div>
                                             <label for="fav-white" class="form-label">Fav Icon (dark)</label>
-                                            <input class="form-control" type="file" id="formFileMultiple" >
+                                            <input class="form-control" type="file" id="formFileMultiple">
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-12 p-2">
                                         <div>
                                             <label for="fav-white" class="form-label">Logo (white)</label>
-                                            <input class="form-control" type="file" id="formFileMultiple" >
+                                            <input class="form-control" type="file" id="formFileMultiple">
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-12 p-2">
                                         <div>
                                             <label for="fav-white" class="form-label">Logo (dark)</label>
-                                            <input class="form-control" type="file" id="formFileMultiple" >
+                                            <input class="form-control" type="file" id="formFileMultiple">
                                         </div>
                                     </div>
                                 </form>
@@ -603,7 +605,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
     <script src="assets/js/pages/datatables.init.js"></script>
-
+    <!-- file pond -->
+    <script src="assets/js/filepond.min.js"></script>
+    <script>
+        $(".filepond-multiple").filepond({});
+    </script>
 </body>
 
 </html>
