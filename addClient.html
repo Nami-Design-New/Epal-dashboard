@@ -511,14 +511,9 @@
                                 <div class="card-body">
                                     <div class="nav flex-column nav-pills text-center" id="v-pills-tab" role="tablist"
                                         aria-orientation="vertical">
+                                      
                                         <!-- tab btn -->
-                                        <a class="nav-link mb-2 active" id="v-pills-comapnyInfo-tab"
-                                            data-bs-toggle="pill" href="#v-pills-comapnyInfo" role="tab"
-                                            aria-controls="v-pills-comapnyInfo" aria-selected="true">
-                                            Company Info
-                                        </a>
-                                        <!-- tab btn -->
-                                        <a class="nav-link mb-2" id="v-pills-clientInfo-tab" data-bs-toggle="pill"
+                                        <a class="nav-link mb-2 active" id="v-pills-clientInfo-tab" data-bs-toggle="pill"
                                             href="#v-pills-clientInfo" role="tab" aria-controls="v-pills-clientInfo"
                                             aria-selected="false">
                                             Client Info
@@ -543,9 +538,10 @@
                             <div class="card h-100 m-0">
                                 <div class="card-body">
                                     <div class="tab-content text-muted mt-4 mt-md-0 h-100" id="v-pills-tabContent">
-                                        <div class="tab-pane fade show active h-100" id="v-pills-comapnyInfo"
-                                            role="tabpanel" aria-labelledby="v-pills-comapnyInfo-tab">
-                                            <form action="" class="row m-0 h-100">
+                                     
+                                        <div class="tab-pane fade show active h-100" id="v-pills-clientInfo" role="tabpanel"
+                                            aria-labelledby="v-pills-clientInfo-tab">
+                                            <form action="" class="h-100 row m-0">
                                                 <div class="col-lg-4 col-md-6 col-12 p-2">
                                                     <label class="form-label">Company</label>
                                                     <select class="js-example-basic-multiple" multiple="multiple"
@@ -578,24 +574,14 @@
                                                         <option value="5">Referral</option>
                                                     </select>
                                                 </div>
-                                                <div class="col-12 p-2 d-flex justify-content-end mt-auto">
-                                                    <button class="btn btn-success fs-7 fw-medium" type="submit">
-                                                        Save
-                                                    </button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div class="tab-pane fade h-100" id="v-pills-clientInfo" role="tabpanel"
-                                            aria-labelledby="v-pills-clientInfo-tab">
-                                            <form action="" class="h-100 row m-0">
-                                                <div class="col-lg-4 col-md-6 col-12 p-2">
+                                                <!-- <div class="col-lg-4 col-md-6 col-12 p-2">
                                                     <div>
                                                         <label for="company" class="form-label">company</label>
                                                         <input type="text" class="form-control" id="company"
                                                             placeholder="company">
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-8 col-md-6 col-12 p-2"></div>
+                                                <div class="col-lg-8 col-md-6 col-12 p-2"></div> -->
                                                 <div class="col-lg-4 col-md-6 col-12 p-2">
                                                     <div>
                                                         <label for="firstName" class="form-label">First Name</label>
