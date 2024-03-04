@@ -184,7 +184,8 @@
   border: 1px dashed #bebebe;
   border-radius: 8px;
   display: flex;
-  gap: 16px;
+  gap: 12px;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
@@ -192,6 +193,17 @@
   margin: 0;
   cursor: pointer;
   flex: 1;
+}
+.singleRole .permsionName {
+  font-weight: bold;
+  width: 100%;
+  margin: 0;
+}
+.singleRole .permsionRole {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .dropdown-item {
