@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 .menuFav {
   height: 22px;
   object-fit: contain;
@@ -160,38 +161,184 @@
   border-bottom: 1px solid var(-vz-border-color);
 }
 
-
-.select2-container--default .select2-selection--multiple .select2-selection__choice__display{
+.select2-container--default .select2-selection--multiple .select2-selection__choice__display {
   color: #fff;
 }
 
-.singleRole{
+.singleRole {
   padding: 16px 20px;
   border: 1px dashed #bebebe;
   border-radius: 8px;
   display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
+  gap: 16px;
   align-items: center;
   justify-content: space-between;
-  label{
+  label {
     margin: 0;
     cursor: pointer;
     flex: 1;
   }
-  .permsionName{
-    font-weight: bold;
+}
+
+.dropdown-item {
+  text-transform: capitalize;
+}
+
+.check_field {
+  label {
     width: 100%;
-    margin: 0;
-  }
-  .permsionRole{
+    height: 60px;
+    cursor: pointer;
     display: flex;
-    gap: 16px;
     align-items: center;
-    justify-content: space-between;
+    margin: 0;
+    isolation: isolate;
+    cursor: pointer;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    span {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      color: var(--black-color);
+    }
+    input {
+      z-index: -1;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      appearance: none;
+      height: 100%;
+      transition: .3s ease-in-out;
+      border-radius: 14px;
+      cursor: pointer;
+      background-color: var(--vz-body-bg);
+      border: 1px solid var(--vz-border-color-translucent);
+      &:checked {
+        background-color: var(--vz-focus-ring-color);
+        border: 1px solid var(--vz-focus-ring-color);
+      }
+    }
   }
 }
 
-.dropdown-item{
-  text-transform: capitalize;
+.inovice {
+  border-top: 8px solid var(--vz-vertical-menu-bg);
+  border-bottom: 8px solid var(--vz-vertical-menu-bg);
+  padding: 16px;
+  background: var(--vz-body-bg);
+  .info,
+  .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    h1 {
+      color: var(--black-color);
+    }
+    p {
+      margin-bottom: 2px;
+      color: var(--black-color);
+    }
+  }
+  .text p {
+    width: 100%;
+  }
+  .line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: var(--vz-focus-ring-color);
+  }
+  .total {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-end;
+    h4 {
+      margin: 0;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--vz-vertical-menu-bg);
+      span {
+        font-size: 28px;
+        font-weight: 600;
+      }
+    }
+  }
+  .inovice_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    .qr {
+      background: #fff;
+      padding: 12px;
+      border-radius: 12px;
+      img {
+        height: 100px;
+      }
+    }
+  }
+  &.inovice2 {
+    background: none;
+    border: none;
+    .info {
+      justify-content: center;
+      height: 100%;
+    }
+    .table_container {
+      border-radius: 12px;
+      border: 1px solid var(--vz-border-color);
+      .table {
+        margin: 0;
+      }
+    }
+    .total_container {
+      background: var(--vz-body-bg);
+      margin-top: 32px;
+      padding: 16px;
+      border-radius: 12px;
+    }
+    .inovice_footer {
+      background: var(--vz-body-bg);
+      padding: 16px;
+      border-radius: 12px;
+    }
+  }
+  &.inovice3 {
+    border: 0;
+    .inv {
+      font-family: "Playfair Display", serif;
+      font-size: 36px;
+      color: #000;
+    }
+    .table_container {
+      border: 1px solid var(--vz-border-color);
+      .table {
+        margin: 0;
+        tbody tr:last-child{
+          border-color: var(--vz-border-color);
+        }
+      }
+    }
+    .inovice_footer {
+      margin-top: 48px;
+    }
+    .total_container {
+      margin-top: 32px;
+      h5 {
+        padding: 8px 16px;
+      }
+      .border-1 {
+        border: 1px solid #000;
+      }
+    }
+    .bank{
+      height: 100%;
+      align-items: flex-start;
+      justify-content: center;
+    }
+  }
 }
