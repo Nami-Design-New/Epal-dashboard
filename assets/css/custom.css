@@ -244,6 +244,8 @@
   border-bottom: 8px solid var(--vz-vertical-menu-bg);
   padding: 16px;
   background: var(--vz-body-bg);
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .inovice .info,
 .inovice .text {
